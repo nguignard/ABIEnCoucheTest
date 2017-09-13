@@ -16,7 +16,7 @@ namespace ABIEnCouches
             this.leCollaborateur = leCollaborateur;
             this.leForm = new frmVisuCollaborateur(leCollaborateur);
             this.leForm.Text = leCollaborateur.ToString();
-
+           
             this.leForm.ShowDialog();
 
 

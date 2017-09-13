@@ -38,7 +38,6 @@
             this.txtNumeroMatricule = new System.Windows.Forms.TextBox();
             this.cmbFamille = new System.Windows.Forms.ComboBox();
             this.btnModifier = new System.Windows.Forms.Button();
-            this.btnArchiver = new System.Windows.Forms.Button();
             this.grdContrats = new System.Windows.Forms.DataGridView();
             this.lblContrats = new System.Windows.Forms.Label();
             this.btnCreateContrat = new System.Windows.Forms.Button();
@@ -136,22 +135,13 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(45, 332);
+            this.btnModifier.Location = new System.Drawing.Point(12, 332);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(130, 22);
             this.btnModifier.TabIndex = 20;
             this.btnModifier.Text = "&Modifier Collaborateur";
             this.btnModifier.UseVisualStyleBackColor = true;
             this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
-            // 
-            // btnArchiver
-            // 
-            this.btnArchiver.Location = new System.Drawing.Point(181, 332);
-            this.btnArchiver.Name = "btnArchiver";
-            this.btnArchiver.Size = new System.Drawing.Size(132, 22);
-            this.btnArchiver.TabIndex = 21;
-            this.btnArchiver.Text = "&Archiver Collaborateur";
-            this.btnArchiver.UseVisualStyleBackColor = true;
             // 
             // grdContrats
             // 
@@ -241,7 +231,6 @@
             this.Controls.Add(this.btnCreateContrat);
             this.Controls.Add(this.lblContrats);
             this.Controls.Add(this.grdContrats);
-            this.Controls.Add(this.btnArchiver);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.cmbFamille);
             this.Controls.Add(this.txtNumeroMatricule);
@@ -275,7 +264,6 @@
         private System.Windows.Forms.TextBox txtNumeroMatricule;
         private System.Windows.Forms.ComboBox cmbFamille;
         internal System.Windows.Forms.Button btnModifier;
-        internal System.Windows.Forms.Button btnArchiver;
         internal System.Windows.Forms.DataGridView grdContrats;
         private System.Windows.Forms.Label lblContrats;
         private System.Windows.Forms.Button btnCreateContrat;

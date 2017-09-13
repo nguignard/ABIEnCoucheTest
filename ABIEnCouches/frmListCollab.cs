@@ -14,7 +14,6 @@ namespace ABIEnCouches
 
     public partial class frmListCollab : Form
     {
-
         private Collaborateurs listeCollaborateurs;
 
         public frmListCollab(Collaborateurs uneliste)

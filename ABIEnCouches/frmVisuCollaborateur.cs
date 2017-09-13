@@ -12,22 +12,21 @@ namespace ABIEnCouches
 {
     public partial class frmVisuCollaborateur : Form
     {
-
         Collaborateur leCollaborateur;
 
         public frmVisuCollaborateur(Collaborateur unCollab)
         {
             this.leCollaborateur = unCollab;
             InitializeComponent();
-            this.AfficheCollab(this.leCollaborateur);
-            this.AfficheContrats();
+            this.AfficheCollaborateur(this.leCollaborateur);
+            this.AfficheContrats(this.leCollaborateur.dtContrats);
 
 
 
         }
 
 
-        private void AfficheCollab(Collaborateur unCollab)
+        private void AfficheCollaborateur(Collaborateur unCollab)
         {
             this.Text = this.leCollaborateur.ToString();
             this.txtNumeroMatricule.Text = unCollab.Matricule.ToString();
@@ -38,9 +37,21 @@ namespace ABIEnCouches
             this.cmbFamille.SelectedItem = unCollab.SituationFamiliale;
         }
 
-        private void AfficheContrats()
+        internal void AfficheContrats(DataTable dt)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             //TODO : initialiser liste de contrats
+
+
+
+
         }
 
 

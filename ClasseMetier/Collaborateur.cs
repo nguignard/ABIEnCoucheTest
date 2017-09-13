@@ -24,6 +24,7 @@ namespace ABIEnCouches
         private bool actif;
 
         private SortedDictionary<int, ContratType> contrats;
+        private DataTable dtContrats;
         private SortedDictionary<DateTime, HistoriqueAugmentation> augmentations;
 
         //CONSTRUCTEURS-------------------------------------------------------------------------------
@@ -45,6 +46,13 @@ namespace ABIEnCouches
             this.PrenomCollab = prenomCollab;
             this.SituationFamiliale = situationFamiliale;
             this.Actif = actif;
+
+            this.contrats = new SortedDictionary<int, ContratType>();
+            this.dtContrats = new DataTable();
+            dtContrats.Columns.Add("IDCONTRAT", typeof(int));
+            dtContrats.Columns.Add("TYPECONTRAT", typeof(String));
+            dtContrats.Columns.Add("DATEDEBUT", typeof(String));
+
         }
 
 
@@ -94,7 +102,6 @@ namespace ABIEnCouches
             }
         }
 
-
         /// <summary>
         /// Accesseur NomCollab
         /// </summary>
@@ -138,7 +145,6 @@ namespace ABIEnCouches
                 }
             }
         }
-
 
         /// <summary>
         /// Accesseur SituationFamiliale
@@ -269,7 +275,6 @@ namespace ABIEnCouches
             }
         }
 
-
         public HistoriqueAugmentation RestituerAugmentation(DateTime date)
         {
             if (!augmentations.ContainsKey(date))
@@ -373,6 +378,25 @@ namespace ABIEnCouches
                 //throw new Exception(st + " un contrat est déja en cours");
             }
             return b;
+        }
+
+        public DataTable ListerContrats()
+        {
+            dtContrats.Clear();
+            DataRow dr;
+            foreach(ContratType contrat in contrats.Values)
+            {
+                Type leType = contrat.GetType();
+
+                Console.WriteLine(leType.ToString());
+
+                dr = dtContrats.NewRow();
+                dr[0] = contrat.IdContrat;
+                dr[1] = leType.ToString();
+                dr[2] = contrat.DateDebutContrat.Date.ToString();
+                dtContrats.Rows.Add(dr);
+            }
+            return this.dtContrats;
         }
 
     }
