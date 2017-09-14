@@ -66,6 +66,8 @@
     <Compile Include="ContratTypeE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dao.cs" />
+    <Compile Include="DonneesDao.cs" />
     <Compile Include="Entreprise.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
