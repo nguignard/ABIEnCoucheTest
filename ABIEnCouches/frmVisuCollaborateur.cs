@@ -18,15 +18,15 @@ namespace ABIEnCouches
         {
             this.leCollaborateur = unCollab;
             InitializeComponent();
-            this.AfficheCollaborateur(this.leCollaborateur);
-            this.AfficheContrats(this.leCollaborateur.dtContrats);
+           
+           
 
 
 
         }
 
 
-        private void AfficheCollaborateur(Collaborateur unCollab)
+        internal void AfficheCollaborateur(Collaborateur unCollab)
         {
             this.Text = this.leCollaborateur.ToString();
             this.txtNumeroMatricule.Text = unCollab.Matricule.ToString();
@@ -35,22 +35,10 @@ namespace ABIEnCouches
             this.rdbM.Checked = unCollab.Civilite == "M" ? true : false;
             this.rdbF.Checked = unCollab.Civilite == "F" ? true : false;
             this.cmbFamille.SelectedItem = unCollab.SituationFamiliale;
-        }
 
-        internal void AfficheContrats(DataTable dt)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            //TODO : initialiser liste de contrats
-
-
-
+            this.grdContrats.DataSource = unCollab.GetContrats();
+            this.grdContrats.Refresh();
+            this.btnFermer.Enabled = true;
 
         }
 

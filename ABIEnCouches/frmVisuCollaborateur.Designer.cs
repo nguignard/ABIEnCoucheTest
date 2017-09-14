@@ -123,6 +123,7 @@
             // 
             // cmbFamille
             // 
+            this.cmbFamille.Enabled = false;
             this.cmbFamille.FormattingEnabled = true;
             this.cmbFamille.Items.AddRange(new object[] {
             "Celibataire",

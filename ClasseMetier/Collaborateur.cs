@@ -292,11 +292,23 @@ namespace ABIEnCouches
 
         //GESTION COLLECTION DE CONTRATS--------------------------------------------------------------------------------
         /// <pdGenerated>default getter</pdGenerated>
-        public System.Collections.Generic.SortedDictionary<int, ContratType> GetContrats()
+        public DataTable GetContrats()
         {
-            if (contrats == null)
-                contrats = new System.Collections.Generic.SortedDictionary<int, ContratType>();
-            return contrats;
+            dtContrats.Clear();
+            DataRow dr;
+            foreach (ContratType contrat in contrats.Values)
+            {
+                Type leType = contrat.GetType();
+
+                Console.WriteLine(leType.ToString());
+
+                dr = dtContrats.NewRow();
+                dr[0] = contrat.IdContrat;
+                dr[1] = leType.ToString();
+                dr[2] = contrat.DateDebutContrat.Date.ToString();
+                dtContrats.Rows.Add(dr);
+            }
+            return this.dtContrats;
         }
 
         ///// <pdGenerated>default setter</pdGenerated>

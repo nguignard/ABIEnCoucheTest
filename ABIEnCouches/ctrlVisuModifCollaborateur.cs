@@ -14,8 +14,11 @@ namespace ABIEnCouches
         public ctrlVisuModifCollaborateur(Collaborateur leCollaborateur)
         {
             this.leCollaborateur = leCollaborateur;
+
             this.leForm = new frmVisuCollaborateur(leCollaborateur);
             this.leForm.Text = leCollaborateur.ToString();
+            this.leForm.AfficheCollaborateur(leCollaborateur);
+            
            
             this.leForm.ShowDialog();
 

@@ -53,16 +53,11 @@ namespace ABIEnCouches
         }
 
 
-
-
-
-
         /// <summary>
         /// initialiseListeCollab()
         /// </summary>
         private void instancieCollaborateurs()
         {
-
             listeCollaborateurs = new Collaborateurs();
             Collaborateur collaborateur = new Collaborateur("M", "DUPOND", "Roger", "marie", true);
             Cdi contrat = new Cdi(new DateTime(2010, 5, 5).Date, "Chef de Projet", "Cadre", 5000);
@@ -74,10 +69,6 @@ namespace ABIEnCouches
 
             collaborateur.AddContrat(contrat);
             listeCollaborateurs.AddCollaborateur(collaborateur);
-            Console.WriteLine(contrat.ToString());
-
-            Console.Write(listeCollaborateurs.RestituerCollaborateur(2).ToString());
-            Console.Write(collaborateur.RestituerContrat(2).ToString());
         }
 
 
