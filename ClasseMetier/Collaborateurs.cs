@@ -79,15 +79,6 @@ namespace ABIEnCouches
             }
         }
 
-        ///// <pdGenerated>default removeAll</pdGenerated>
-        //public void RemoveAllContratType()
-        //{
-        //    if (contrats != null)
-        //        contrats.Clear();
-        //}
-
-
-
         /// <summary>
         /// controlAddContrats controle la validite du collaborateur ajouté
         /// </summary>
@@ -122,5 +113,13 @@ namespace ABIEnCouches
             }
             return b;
         }
+
+
+        ///// <pdGenerated>default removeAll</pdGenerated>
+        //public void RemoveAllContratType()
+        //{
+        //    if (contrats != null)
+        //        contrats.Clear();
+        //}
     }
 }

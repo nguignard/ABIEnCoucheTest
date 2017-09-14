@@ -1,6 +1,6 @@
 ﻿namespace ABIEnCouches
 {
-    partial class frmVisuContrat
+    partial class frmModifierContrat
     {
         /// <summary>
         /// Required designer variable.
@@ -51,8 +51,8 @@
             this.rdbCDD = new System.Windows.Forms.RadioButton();
             this.rdbCDI = new System.Windows.Forms.RadioButton();
             this.btnFermer = new System.Windows.Forms.Button();
-            this.btnModifier = new System.Windows.Forms.Button();
-            this.btnCloturer = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnValider = new System.Windows.Forms.Button();
             this.grpAttributsContrats.SuspendLayout();
             this.grpStage.SuspendLayout();
             this.grpTypeContrat.SuspendLayout();
@@ -72,11 +72,10 @@
             this.grpAttributsContrats.Controls.Add(this.lblQualification);
             this.grpAttributsContrats.Controls.Add(this.lblStatut);
             this.grpAttributsContrats.Controls.Add(this.lblSalaire);
-            this.grpAttributsContrats.Enabled = false;
-            this.grpAttributsContrats.Location = new System.Drawing.Point(12, 81);
+            this.grpAttributsContrats.Location = new System.Drawing.Point(12, 74);
             this.grpAttributsContrats.Name = "grpAttributsContrats";
             this.grpAttributsContrats.Size = new System.Drawing.Size(313, 159);
-            this.grpAttributsContrats.TabIndex = 60;
+            this.grpAttributsContrats.TabIndex = 67;
             this.grpAttributsContrats.TabStop = false;
             // 
             // dateFin
@@ -182,11 +181,10 @@
             this.grpStage.Controls.Add(this.txtEcole);
             this.grpStage.Controls.Add(this.lblEcole);
             this.grpStage.Controls.Add(this.lblMission);
-            this.grpStage.Enabled = false;
-            this.grpStage.Location = new System.Drawing.Point(12, 246);
+            this.grpStage.Location = new System.Drawing.Point(12, 239);
             this.grpStage.Name = "grpStage";
             this.grpStage.Size = new System.Drawing.Size(313, 79);
-            this.grpStage.TabIndex = 59;
+            this.grpStage.TabIndex = 66;
             this.grpStage.TabStop = false;
             this.grpStage.Text = "pour les Stages";
             // 
@@ -227,11 +225,10 @@
             this.grpTypeContrat.Controls.Add(this.rdbStage);
             this.grpTypeContrat.Controls.Add(this.rdbCDD);
             this.grpTypeContrat.Controls.Add(this.rdbCDI);
-            this.grpTypeContrat.Enabled = false;
-            this.grpTypeContrat.Location = new System.Drawing.Point(12, 19);
+            this.grpTypeContrat.Location = new System.Drawing.Point(12, 12);
             this.grpTypeContrat.Name = "grpTypeContrat";
             this.grpTypeContrat.Size = new System.Drawing.Size(313, 41);
-            this.grpTypeContrat.TabIndex = 55;
+            this.grpTypeContrat.TabIndex = 62;
             this.grpTypeContrat.TabStop = false;
             this.grpTypeContrat.Text = "Type de contrat";
             // 
@@ -269,47 +266,44 @@
             // 
             // btnFermer
             // 
-            this.btnFermer.Location = new System.Drawing.Point(250, 354);
+            this.btnFermer.Location = new System.Drawing.Point(249, 338);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(75, 23);
-            this.btnFermer.TabIndex = 58;
+            this.btnFermer.TabIndex = 65;
             this.btnFermer.Text = "&Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
-            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
-            // btnModifier
+            // btnCancel
             // 
-            this.btnModifier.Location = new System.Drawing.Point(169, 354);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(75, 23);
-            this.btnModifier.TabIndex = 61;
-            this.btnModifier.Text = "&Modifier";
-            this.btnModifier.UseVisualStyleBackColor = true;
-            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            this.btnCancel.Location = new System.Drawing.Point(168, 338);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 63;
+            this.btnCancel.Text = "&Annuler";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // btnCloturer
+            // btnValider
             // 
-            this.btnCloturer.Location = new System.Drawing.Point(14, 354);
-            this.btnCloturer.Name = "btnCloturer";
-            this.btnCloturer.Size = new System.Drawing.Size(75, 23);
-            this.btnCloturer.TabIndex = 62;
-            this.btnCloturer.Text = "&Clôturer";
-            this.btnCloturer.UseVisualStyleBackColor = true;
-          
+            this.btnValider.Location = new System.Drawing.Point(87, 338);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(75, 23);
+            this.btnValider.TabIndex = 64;
+            this.btnValider.Text = "&Valider";
+            this.btnValider.UseVisualStyleBackColor = true;
             // 
-            // frmVisuContrat
+            // frmModifierContrat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 389);
-            this.Controls.Add(this.btnCloturer);
-            this.Controls.Add(this.btnModifier);
+            this.ClientSize = new System.Drawing.Size(345, 382);
             this.Controls.Add(this.grpAttributsContrats);
             this.Controls.Add(this.grpStage);
             this.Controls.Add(this.grpTypeContrat);
             this.Controls.Add(this.btnFermer);
-            this.Name = "frmVisuContrat";
-            this.Text = "frmVisuContrat";
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnValider);
+            this.Name = "frmModifierContrat";
+            this.Text = "frmModifierContrat";
             this.grpAttributsContrats.ResumeLayout(false);
             this.grpAttributsContrats.PerformLayout();
             this.grpStage.ResumeLayout(false);
@@ -345,7 +339,7 @@
         private System.Windows.Forms.RadioButton rdbCDD;
         private System.Windows.Forms.RadioButton rdbCDI;
         private System.Windows.Forms.Button btnFermer;
-        internal System.Windows.Forms.Button btnModifier;
-        internal System.Windows.Forms.Button btnCloturer;
+        private System.Windows.Forms.Button btnCancel;
+        internal System.Windows.Forms.Button btnValider;
     }
 }

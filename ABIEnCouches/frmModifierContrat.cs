@@ -10,32 +10,43 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
-    public partial class frmVisuContrat : Form
+    public partial class frmModifierContrat : Form
     {
-        private ContratType leContrat;
-        private frmVisuCollaborateur leForm;
 
-        public frmVisuContrat(ContratType unContrat)
+        ContratType leContrat;
+
+        public frmModifierContrat(ContratType leContrat)
         {
-            this.leContrat = unContrat;
+            this.leContrat = leContrat;
             InitializeComponent();
-            this.Text = unContrat.TypeContrat();
-            this.AfficheContrat(leContrat);
-            this.AfficheWindowContrat();
         }
 
 
-        private void btnModifier_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            //TODO: ctrlModifierContrat
+            DialogResult dialogResult = MessageBox.Show("Voulez vous réinitialiser les champs, Yes pour confirmer", "Réinitialisation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.AfficheContrat(leContrat);
+                this.AfficheWindowContrat();
+            }
         }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
+            DialogResult res = MessageBox.Show("Ok pour confirmer", "Fermer?", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
                 this.Close();
+            }
         }
-
-        //FONCTIONS -------------------------------------
+        
 
         internal void AfficheContrat(ContratType unContrat)
         {
@@ -44,12 +55,12 @@ namespace ABIEnCouches
             this.txtSalaire.Text = leContrat.SalaireContractuel.ToString();
             this.txtStatut.Text = leContrat.Statut;
 
-            if(leContrat is ContratTemporaire)
+            if (leContrat is ContratTemporaire)
             {
-                ContratTemporaire  leTemp = (ContratTemporaire)leContrat;
+                ContratTemporaire leTemp = (ContratTemporaire)leContrat;
 
                 this.txtMotif.Text = leTemp.Motif;
-                this.dateFin.Text= leTemp.DateFinContrat.ToString();
+                this.dateFin.Value = leTemp.DateFinContrat.Date;
             }
 
             if (leContrat is Cdd)
@@ -87,10 +98,10 @@ namespace ABIEnCouches
 
 
 
-            this.dateFin.Enabled = false;
-            this.txtMotif.Enabled = false;
-            this.lblMotif.Enabled = false;
-            this.grpStage.Enabled = false;
+            this.dateFin.Enabled = true;
+            this.txtMotif.Enabled = true;
+            this.lblMotif.Enabled = true;
+            this.grpStage.Enabled = true;
 
             if (this.rdbCDI.Checked == true)
             {
@@ -106,6 +117,10 @@ namespace ABIEnCouches
             }
         }
 
-      
+
+
+
+
+
     }
 }

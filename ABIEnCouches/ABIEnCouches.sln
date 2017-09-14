@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABIEnCouches", "ABIEnCouche
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasseMetier", "..\ClasseMetier\ClasseMetier.csproj", "{030C2412-8DE1-417D-B6E0-442FD0C812D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesDAO", "..\ClassesDAO\ClassesDAO.csproj", "{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{030C2412-8DE1-417D-B6E0-442FD0C812D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{030C2412-8DE1-417D-B6E0-442FD0C812D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{030C2412-8DE1-417D-B6E0-442FD0C812D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,6 +35,7 @@ namespace ABIEnCouches
             this.Statut = statut;
             this.SalaireContractuel = salaireContractuel;
         }
+        
 
         //GET SET--------------------------------------------------------------
        
@@ -209,14 +210,6 @@ namespace ABIEnCouches
 
         //FONCTIONS-------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
         /// <summary>
         /// cloturerContrat
         /// </summary>
@@ -247,5 +240,19 @@ namespace ABIEnCouches
         {
             return "idContrat "+ idContrat+ " qualification " + " statut "+ statut ;
         }
+
+        public string TypeContrat()
+        {
+            string s = this.GetType().ToString();
+            Char charRange = '.';
+            int startIndex = s.IndexOf(charRange) + 1;
+            int endIndex = s.Length - 1;
+            int l = endIndex - startIndex + 1;
+            return s.Substring(startIndex, l);
+        }
+
+
+
+
     }
 }

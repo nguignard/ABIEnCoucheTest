@@ -9,7 +9,6 @@ namespace ABIEnCouches
 {
     class ctrlVisuContrat
     {
-
         frmVisuContrat leForm;
         ContratType leContrat;
 
@@ -18,19 +17,25 @@ namespace ABIEnCouches
             this.leContrat = unContrat;
             this.leForm = new frmVisuContrat(leContrat);
 
-            this.leForm.ShowDialog();
+            this.leForm.btnCloturer.Click += new System.EventHandler(this.btnCloturer_Click);
+
+            this.leForm.Show();
             this.leForm.AfficheContrat(unContrat);
 
 
 
         }
-        
-        
+
+
+        private void btnCloturer_Click(object sender, EventArgs e)
+        {
+            //TODO
+
+        }
 
 
 
 
-        
 
 
     }

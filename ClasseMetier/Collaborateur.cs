@@ -56,6 +56,7 @@ namespace ABIEnCouches
         }
 
 
+
         //GETTER-SETTERS----------------------------------------------------------------------
 
         /// <summary>
@@ -196,6 +197,46 @@ namespace ABIEnCouches
 
         //FONCTIONS---------------------------------------------------------------------------
 
+        //public ContratType ContratInitial()
+        //{
+        //    DateTime t = DateTime.MaxValue;
+        //    ContratType x;
+
+        //    Rechercher Date contrat initial
+        //    foreach (DateTime c in dtContrats.Rows.Find(1))
+        //    {
+        //        if (t < c.DateDebutContrat)
+        //        {
+        //            t = c.DateDebutContrat;
+        //        }
+        //    }
+        //    if (t != null)
+        //    {
+
+        //        return t;
+        //    }
+        //    else
+        //    {
+        //        throw new Exception("pas de contat initial");
+        //    }
+
+
+        //    //Retourner contrat Initial
+        //    foreach (ContratType c in contrats.Values)
+        //    {
+        //        if (c.DateDebutContrat == t)
+        //        {
+        //            x = RestituerContrat(c.IdContrat);
+        //        }
+        //    }
+
+        //    return x;
+
+
+        //}
+
+
+
         public int GetNewMatricule()
         {
            return Donnees.CompteurCollaborateur++;
@@ -298,13 +339,9 @@ namespace ABIEnCouches
             DataRow dr;
             foreach (ContratType contrat in contrats.Values)
             {
-                Type leType = contrat.GetType();
-
-                Console.WriteLine(leType.ToString());
-
                 dr = dtContrats.NewRow();
                 dr[0] = contrat.IdContrat;
-                dr[1] = leType.ToString();
+                dr[1] = contrat.TypeContrat();
                 dr[2] = contrat.DateDebutContrat.Date.ToString();
                 dtContrats.Rows.Add(dr);
             }

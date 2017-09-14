@@ -46,6 +46,7 @@
             this.rdbF = new System.Windows.Forms.RadioButton();
             this.rdbM = new System.Windows.Forms.RadioButton();
             this.btnFermer = new System.Windows.Forms.Button();
+            this.btnContratInitial = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdContrats)).BeginInit();
             this.grpCivil.SuspendLayout();
@@ -222,11 +223,22 @@
             this.btnFermer.UseVisualStyleBackColor = true;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
+            // btnContratInitial
+            // 
+            this.btnContratInitial.Location = new System.Drawing.Point(549, 333);
+            this.btnContratInitial.Name = "btnContratInitial";
+            this.btnContratInitial.Size = new System.Drawing.Size(130, 22);
+            this.btnContratInitial.TabIndex = 28;
+            this.btnContratInitial.Text = "Contrat Initial";
+            this.btnContratInitial.UseVisualStyleBackColor = true;
+            this.btnContratInitial.Visible = false;
+            // 
             // frmVisuCollaborateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 366);
+            this.Controls.Add(this.btnContratInitial);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.grpCivil);
             this.Controls.Add(this.lblCivilite);
@@ -274,5 +286,6 @@
         private System.Windows.Forms.RadioButton rdbF;
         private System.Windows.Forms.RadioButton rdbM;
         private System.Windows.Forms.Button btnFermer;
+        internal System.Windows.Forms.Button btnContratInitial;
     }
 }

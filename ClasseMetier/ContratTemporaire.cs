@@ -12,7 +12,7 @@ namespace ABIEnCouches
 
     public abstract class ContratTemporaire : ContratType
     {
-        protected DateTime datFinContrat;
+        protected DateTime dateFinContrat;
         protected String motif;
 
         /// <summary>
@@ -25,29 +25,26 @@ namespace ABIEnCouches
         /// <param name="salaireContractuel"></param>
         /// <param name="datFinContrat"></param>
         /// <param name="motif"></param>
-        public ContratTemporaire(DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, DateTime datFinContrat, String motif) : base( dateDebutContrat,  qualification,  statut,  salaireContractuel)
+        public ContratTemporaire(DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, 
+            DateTime datFinContrat, String motif) : base(dateDebutContrat, qualification,  statut,  salaireContractuel)
         {
-            this.dateDebutContrat = DateDebutContrat;
-            this.qualification = Qualification;
-            this.statut = Statut;
-            this.salaireContractuel = SalaireContractuel;
-            this.datFinContrat = DatFinContrat;
-            this.motif = Motif;
+            this.DateFinContrat = datFinContrat;
+            this.Motif = motif;
         }
 
         /// <summary>
         /// GetSet DatFinContrat
         /// </summary>
-        public DateTime DatFinContrat
+        public DateTime DateFinContrat
         {
             get
             {
-                return datFinContrat;
+                return dateFinContrat;
             }
            private set
             {
-                if (this.datFinContrat != value)
-                    this.datFinContrat = value;
+                if (this.dateFinContrat != value)
+                    this.dateFinContrat = value;
             }
         }
 

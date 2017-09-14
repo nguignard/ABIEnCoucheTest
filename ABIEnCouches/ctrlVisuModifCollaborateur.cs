@@ -21,6 +21,7 @@ namespace ABIEnCouches
             this.leForm.AfficheCollaborateur(leCollaborateur);
 
             this.leForm.grdContrats.CellDoubleClick += new DataGridViewCellEventHandler(this.grdContrats_DoubleClick);
+            this.leForm.btnContratInitial.Click += new System.EventHandler(this.btnContratInitial_Click);
             //this.leForm.btnModifier.Click += new System.EventHandler(this.btnAjouter_Click);
 
             this.leForm.ShowDialog();
@@ -42,6 +43,10 @@ namespace ABIEnCouches
 
 
 
+        private void btnContratInitial_Click(object sender, EventArgs e)
+        {
+            //ctrlVisuContrat ctrlInitial = new ctrlVisuContrat(leCollaborateur.ContratInitial());
+        }
 
 
 
