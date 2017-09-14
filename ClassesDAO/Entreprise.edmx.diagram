@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="666b9f71673246b29d0b24920f52a1cf" Name="Diagram1" >
-        <EntityTypeShape EntityType="Entreprise.CollaborateurEntity" Width="1.5" PointX="1" PointY="1.125" />
-        <EntityTypeShape EntityType="Entreprise.CdiE" Width="1.5" PointX="8.25" PointY="0.5" />
-        <EntityTypeShape EntityType="Entreprise.CddE" Width="1.5" PointX="9.5" PointY="1.875" />
-        <EntityTypeShape EntityType="Entreprise.StageE" Width="1.5" PointX="9.375" PointY="4.25" />
-        <EntityTypeShape EntityType="Entreprise.ContratTypeE" Width="1.5" PointX="3.5" PointY="1.625" />
-        <EntityTypeShape EntityType="Entreprise.ContratTemporaireE" Width="1.5" PointX="6" PointY="2.625" />
+        <EntityTypeShape EntityType="Entreprise.CollaborateurE" Width="1.5" PointX="1" PointY="1.125" />
+        <EntityTypeShape EntityType="Entreprise.CdiE" Width="1.5" PointX="9.125" PointY="0.875" />
+        <EntityTypeShape EntityType="Entreprise.CddE" Width="1.5" PointX="9.125" PointY="2.5" />
+        <EntityTypeShape EntityType="Entreprise.StageE" Width="1.5" PointX="9.125" PointY="4" />
+        <EntityTypeShape EntityType="Entreprise.ContratTypeE" Width="1.5" PointX="3.5" PointY="2" />
+        <EntityTypeShape EntityType="Entreprise.ContratTemporaireE" Width="2.25" PointX="6" PointY="2.625" />
         <AssociationConnector Association="Entreprise.CollaborateurEntityContratTypeE" />
         <InheritanceConnector EntityType="Entreprise.CdiE" ManuallyRouted="false" >
         </InheritanceConnector>
         <InheritanceConnector EntityType="Entreprise.ContratTemporaireE" />
         <InheritanceConnector EntityType="Entreprise.CddE" />
-        <InheritanceConnector EntityType="Entreprise.StageE" />
+        <InheritanceConnector EntityType="Entreprise.StageE" ></InheritanceConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
