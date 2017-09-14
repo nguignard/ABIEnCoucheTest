@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
@@ -18,18 +19,26 @@ namespace ABIEnCouches
             this.leForm = new frmVisuCollaborateur(leCollaborateur);
             this.leForm.Text = leCollaborateur.ToString();
             this.leForm.AfficheCollaborateur(leCollaborateur);
-            
-           
+
+            this.leForm.grdContrats.CellDoubleClick += new DataGridViewCellEventHandler(this.grdContrats_DoubleClick);
+            //this.leForm.btnModifier.Click += new System.EventHandler(this.btnAjouter_Click);
+
             this.leForm.ShowDialog();
-
-
-
-
         }
 
 
 
+        private void grdContrats_DoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ContratType leContrat;
+            Int32 laCle; //idContra
+            laCle = (Int32)leForm.grdContrats.CurrentRow.Cells[0].Value;
+            leContrat = this.leCollaborateur.RestituerContrat(laCle);
+            ctrlVisuContrat ctrl = new ctrlVisuContrat(leContrat);
 
+            //leFormContrat.aff(leContrat);
+
+        }
 
 
 

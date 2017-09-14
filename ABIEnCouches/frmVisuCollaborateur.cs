@@ -19,6 +19,7 @@ namespace ABIEnCouches
             this.leCollaborateur = unCollab;
             InitializeComponent();
            
+
            
 
 
@@ -58,5 +59,9 @@ namespace ABIEnCouches
             }
         }
 
+        private void btnCreateContrat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

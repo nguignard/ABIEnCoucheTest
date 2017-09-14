@@ -10,29 +10,27 @@ namespace ABIEnCouches
     class ctrlVisuContrat
     {
 
-        frmVisuCollaborateur leForm;
+        frmVisuContrat leForm;
         ContratType leContrat;
 
-        public ctrlVisuContrat()
+        public ctrlVisuContrat(ContratType unContrat)
         {
-            leForm.grdContrats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdContrats_DoubleClick);
+            this.leContrat = unContrat;
+            this.leForm = new frmVisuContrat(leContrat);
 
-        }
-
-        private void grdContrats_DoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-
-
-            //frmVisuContrat visuContrat = new frmVisuContrat();
-
-            
-
+            this.leForm.ShowDialog();
+            this.leForm.AfficheContrat(unContrat);
 
 
 
         }
+        
+        
+
+
+
+
+        
 
 
     }

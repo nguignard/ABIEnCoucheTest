@@ -15,12 +15,10 @@ namespace ABIEnCouches
         private ContratType leContrat;
         private frmVisuCollaborateur leForm;
 
-        public frmVisuContrat(frmVisuCollaborateur unForm)
+        public frmVisuContrat(ContratType unContrat)
         {
-            this.leForm = unForm;
+            this.leContrat = unContrat;
             InitializeComponent();
-            unForm.grdContrats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdContrats_CellContentClick);
-
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
@@ -37,7 +35,7 @@ namespace ABIEnCouches
             DialogResult dialogResult = MessageBox.Show("Voulez vous réinitialiser les champs, Yes pour confirmer", "Réinitialisation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                this.AfficheContrat();
+                this.AfficheContrat(leContrat);
                 this.AfficheWindowContrat();
             }
         }
@@ -46,18 +44,13 @@ namespace ABIEnCouches
         {
             //TODO
         }
-        private void grdContrats_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-           
-        }
+     
 
 
 
         //FONCTIONS 
 
-        internal void AfficheContrat()
+        internal void AfficheContrat(ContratType unContrat)
         {
             this.rdbCDI.Checked = true;
             this.txtQualif.Text = leContrat.Qualification.ToString();

@@ -169,6 +169,7 @@
             this.btnCreateContrat.TabIndex = 24;
             this.btnCreateContrat.Text = "&Creer un Contrat";
             this.btnCreateContrat.UseVisualStyleBackColor = true;
+            this.btnCreateContrat.Click += new System.EventHandler(this.btnCreateContrat_Click);
             // 
             // lblCivilite
             // 
