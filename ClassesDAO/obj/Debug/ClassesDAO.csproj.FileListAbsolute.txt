@@ -1,0 +1,11 @@
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\ClassesDAO.dll.config
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\ClassesDAO.dll
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\ClassesDAO.pdb
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\EntityFramework.dll
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\EntityFramework.xml
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\obj\Debug\ClassesDAO.csprojResolveAssemblyReference.cache
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\obj\Debug\ClassesDAO.dll
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\obj\Debug\ClassesDAO.pdb

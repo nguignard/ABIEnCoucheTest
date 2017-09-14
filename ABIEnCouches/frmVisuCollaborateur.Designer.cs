@@ -127,9 +127,9 @@
             this.cmbFamille.Enabled = false;
             this.cmbFamille.FormattingEnabled = true;
             this.cmbFamille.Items.AddRange(new object[] {
-            "Celibataire",
-            "Marie",
-            "Divorce"});
+            "CELIBATAIRE",
+            "MARIE",
+            "DIVORCE"});
             this.cmbFamille.Location = new System.Drawing.Point(133, 271);
             this.cmbFamille.Name = "cmbFamille";
             this.cmbFamille.Size = new System.Drawing.Size(200, 21);
@@ -143,7 +143,7 @@
             this.btnModifier.TabIndex = 20;
             this.btnModifier.Text = "&Modifier Collaborateur";
             this.btnModifier.UseVisualStyleBackColor = true;
-            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+           
             // 
             // grdContrats
             // 
@@ -170,7 +170,6 @@
             this.btnCreateContrat.TabIndex = 24;
             this.btnCreateContrat.Text = "&Creer un Contrat";
             this.btnCreateContrat.UseVisualStyleBackColor = true;
-            this.btnCreateContrat.Click += new System.EventHandler(this.btnCreateContrat_Click);
             // 
             // lblCivilite
             // 
@@ -280,7 +279,7 @@
         internal System.Windows.Forms.Button btnModifier;
         internal System.Windows.Forms.DataGridView grdContrats;
         private System.Windows.Forms.Label lblContrats;
-        private System.Windows.Forms.Button btnCreateContrat;
+        internal System.Windows.Forms.Button btnCreateContrat;
         private System.Windows.Forms.Label lblCivilite;
         private System.Windows.Forms.GroupBox grpCivil;
         private System.Windows.Forms.RadioButton rdbF;

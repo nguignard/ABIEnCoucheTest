@@ -31,3 +31,4 @@ C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ABIEnCouches\obj\Debug\ABIEnCouche
 C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ABIEnCouches\obj\Debug\ABIEnCouches.Properties.Resources.resources
 C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ABIEnCouches\obj\Debug\ABIEnCouches.csproj.GenerateResource.Cache
 C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ABIEnCouches\obj\Debug\ABIEnCouches.frmModifierContrat.resources
+C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ABIEnCouches\obj\Debug\ABIEnCouches.frmModifierCollaborateur.resources

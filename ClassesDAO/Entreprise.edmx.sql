@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/14/2017 14:09:05
+-- Date Created: 09/14/2017 15:56:44
 -- Generated from EDMX file: C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\Entreprise.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,44 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_CollaborateurEntityContratTypeE]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ContratTypeESet] DROP CONSTRAINT [FK_CollaborateurEntityContratTypeE];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CdiE_inherits_ContratTypeE]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ContratTypeESet_CdiE] DROP CONSTRAINT [FK_CdiE_inherits_ContratTypeE];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ContratTemporaireE_inherits_ContratTypeE]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ContratTypeESet_ContratTemporaireE] DROP CONSTRAINT [FK_ContratTemporaireE_inherits_ContratTypeE];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CddE_inherits_ContratTemporaireE]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ContratTypeESet_CddE] DROP CONSTRAINT [FK_CddE_inherits_ContratTemporaireE];
+GO
+IF OBJECT_ID(N'[dbo].[FK_StageE_inherits_ContratTemporaireE]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ContratTypeESet_StageE] DROP CONSTRAINT [FK_StageE_inherits_ContratTemporaireE];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[CollaborateurESet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CollaborateurESet];
+GO
+IF OBJECT_ID(N'[dbo].[ContratTypeESet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ContratTypeESet];
+GO
+IF OBJECT_ID(N'[dbo].[ContratTypeESet_CdiE]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ContratTypeESet_CdiE];
+GO
+IF OBJECT_ID(N'[dbo].[ContratTypeESet_ContratTemporaireE]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ContratTypeESet_ContratTemporaireE];
+GO
+IF OBJECT_ID(N'[dbo].[ContratTypeESet_CddE]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ContratTypeESet_CddE];
+GO
+IF OBJECT_ID(N'[dbo].[ContratTypeESet_StageE]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ContratTypeESet_StageE];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables

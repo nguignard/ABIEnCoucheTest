@@ -18,9 +18,6 @@ namespace ABIEnCouches
         {
             this.leCollaborateur = unCollab;
             InitializeComponent();
-           
-
-           
 
 
 
@@ -29,26 +26,19 @@ namespace ABIEnCouches
 
         internal void AfficheCollaborateur(Collaborateur unCollab)
         {
-            this.Text = this.leCollaborateur.ToString();
+            this.Text = unCollab.ToString();
             this.txtNumeroMatricule.Text = unCollab.Matricule.ToString();
             this.txtNom.Text = unCollab.NomCollab;
             this.txtPrenom.Text = unCollab.PrenomCollab;
             this.rdbM.Checked = unCollab.Civilite == "M" ? true : false;
             this.rdbF.Checked = unCollab.Civilite == "F" ? true : false;
-            this.cmbFamille.SelectedItem = unCollab.SituationFamiliale;
+            this.cmbFamille.Text = unCollab.SituationFamiliale;
 
             this.grdContrats.DataSource = unCollab.GetContrats();
             this.grdContrats.Refresh();
             this.btnFermer.Enabled = true;
-
         }
 
-
-
-        private void btnModifier_Click(object sender, EventArgs e)
-        {
-            //TODO
-        }
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
@@ -57,11 +47,6 @@ namespace ABIEnCouches
             {
                 this.Close();
             }
-        }
-
-        private void btnCreateContrat_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

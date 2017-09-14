@@ -22,10 +22,32 @@ namespace ABIEnCouches
 
             this.leForm.grdContrats.CellDoubleClick += new DataGridViewCellEventHandler(this.grdContrats_DoubleClick);
             this.leForm.btnContratInitial.Click += new System.EventHandler(this.btnContratInitial_Click);
+            this.leForm.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            this.leForm.btnCreateContrat.Click += new System.EventHandler(this.btnCreateContrat_Click);
+
             //this.leForm.btnModifier.Click += new System.EventHandler(this.btnAjouter_Click);
 
             this.leForm.ShowDialog();
         }
+
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            ctrlModifierCollaborateur ctrl = new ctrlModifierCollaborateur(this.leCollaborateur);
+
+
+            
+            //TODO
+
+
+        }
+        private void btnCreateContrat_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+
+
 
 
 

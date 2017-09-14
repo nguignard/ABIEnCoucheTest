@@ -176,8 +176,6 @@ namespace ABIEnCouches
         }
 
 
-
-
     /// <summary>
     /// rdbStage_CheckedChanged
     /// </summary>
@@ -199,7 +197,7 @@ namespace ABIEnCouches
             this.txtMotif.Text = "";
             this.txtQualif.Text = "";
             this.txtSalaire.Text = "";
-            this.txtStatut.Text = "";
+            this.txtStatut.Text = "CELIBATAIRE";
             this.rdbCDI.Checked = true;
         }
 
@@ -211,7 +209,7 @@ namespace ABIEnCouches
         this.txtNom.Text = "";
         this.txtPrenom.Text = "";
         this.cmbFamille.Items.Clear();
-        this.cmbFamille.Items.AddRange(new String[] { "Célibataire", "Marée", "Divorcé" });
+        this.cmbFamille.Items.AddRange(new String[] { "CELIBATAIRE", "MARIE", "DIVORCE" });
         this.rdbM.Checked = true;
 
         this.WhiteContrat();

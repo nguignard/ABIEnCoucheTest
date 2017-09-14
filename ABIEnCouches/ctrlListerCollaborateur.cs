@@ -59,7 +59,7 @@ namespace ABIEnCouches
         private void instancieCollaborateurs()
         {
             listeCollaborateurs = new Collaborateurs();
-            Collaborateur collaborateur = new Collaborateur("M", "DUPOND", "Roger", "marie", true);
+            Collaborateur collaborateur = new Collaborateur("M", "DUPOND", "Roger", "MARIE", true);
             Cdd contrat = new Cdd(new DateTime(2010, 5, 5).Date, "Chef de Projet", "Cadre", 2000, new DateTime(2011, 05, 05).Date, "il fait beau");
             Console.WriteLine(contrat.ToString());
 
@@ -70,7 +70,7 @@ namespace ABIEnCouches
             collaborateur.AddContrat(contrat2);
 
             listeCollaborateurs.AddCollaborateur(collaborateur);
-            collaborateur = new Collaborateur("F", "DUPONt", "Rogee", "marie", false);
+            collaborateur = new Collaborateur("F", "DUPONt", "Rogee", "CELIBATAIRE", true);
             contrat2 = new Cdi(new DateTime(2012, 6, 6).Date, "CDI", "employee", 1500);
 
             collaborateur.AddContrat(contrat);

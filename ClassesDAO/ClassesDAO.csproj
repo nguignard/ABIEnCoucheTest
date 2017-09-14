@@ -57,7 +57,6 @@
     <Compile Include="CdiE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="CollaborateurE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>

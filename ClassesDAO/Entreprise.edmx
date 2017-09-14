@@ -169,7 +169,7 @@
           <Key>
             <PropertyRef Name="matriculeE" />
           </Key>
-          <Property Name="matriculeE" Type="Int16" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
+          <Property Name="matriculeE" Type="Int16" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" annotation:StoreGeneratedPattern="None" />
           <Property Name="civiliteE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="1" FixedLength="true" />
           <Property Name="nomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
           <Property Name="prenomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
@@ -191,7 +191,7 @@
             <PropertyRef Name="idContratE" />
           </Key>
           <NavigationProperty Name="CollaborateurEntity" Relationship="Entreprise.CollaborateurEntityContratTypeE" FromRole="ContratTypeE" ToRole="CollaborateurEntity" />
-          <Property Name="idContratE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
+          <Property Name="idContratE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" annotation:StoreGeneratedPattern="None" />
           <Property Name="dateDebutE" Type="DateTime" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
           <Property Name="qualificationE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
           <Property Name="statutE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />

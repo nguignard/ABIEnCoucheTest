@@ -38,13 +38,13 @@ namespace ABIEnCouches
         /// <param name="prenomCollab"></param>
         /// <param name="situationFamillial"></param>
         /// <param name="actif"></param>
-        public Collaborateur( String civilite, String nomCollab, String prenomCollab, String situationFamillial, bool actif)
+        public Collaborateur( String civilite, String nomCollab, String prenomCollab, String situation, bool actif)
         {
             this.Matricule = GetNewMatricule();
             this.Civilite = civilite;
             this.NomCollab = nomCollab;
             this.PrenomCollab = prenomCollab;
-            this.SituationFamiliale = situationFamiliale;
+            this.SituationFamiliale = situation;
             this.Actif = actif;
 
             this.contrats = new SortedDictionary<int, ContratType>();
@@ -158,7 +158,14 @@ namespace ABIEnCouches
             }
             set
             {
-                this.situationFamiliale = value;
+                if(value == "CELIBATAIRE" || value == "MARIE" || value == "DIVORCE")
+                {
+                    this.situationFamiliale = value;
+                }
+                else
+                {
+                    throw new Exception("situation Familiale incorrecte");
+                }
             }
         }
 
