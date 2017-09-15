@@ -8,6 +8,14 @@ namespace ClassesDAO
 {
     public class Dao
     {
+        public static void InstancieCollaborateur()
+        {
+
+        }
+
+
+
+
 
     }
 }
