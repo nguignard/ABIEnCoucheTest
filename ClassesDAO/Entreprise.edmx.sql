@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/14/2017 15:56:44
--- Generated from EDMX file: C:\Users\DL-CDI\Source\Repos\ABIEnCoucheTest2\ClassesDAO\Entreprise.edmx
+-- Date Created: 09/18/2017 15:40:58
+-- Generated from EDMX file: C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\Entreprise.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -60,8 +60,8 @@ GO
 -- Creating all tables
 -- --------------------------------------------------
 
--- Creating table 'CollaborateurESet'
-CREATE TABLE [dbo].[CollaborateurESet] (
+-- Creating table 'CollaborateursESet'
+CREATE TABLE [dbo].[CollaborateursESet] (
     [matriculeE] smallint  NOT NULL,
     [civiliteE] nchar(1)  NOT NULL,
     [nomE] nvarchar(20)  NOT NULL,
@@ -116,9 +116,9 @@ GO
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
 
--- Creating primary key on [matriculeE] in table 'CollaborateurESet'
-ALTER TABLE [dbo].[CollaborateurESet]
-ADD CONSTRAINT [PK_CollaborateurESet]
+-- Creating primary key on [matriculeE] in table 'CollaborateursESet'
+ALTER TABLE [dbo].[CollaborateursESet]
+ADD CONSTRAINT [PK_CollaborateursESet]
     PRIMARY KEY CLUSTERED ([matriculeE] ASC);
 GO
 
@@ -160,7 +160,7 @@ GO
 ALTER TABLE [dbo].[ContratTypeESet]
 ADD CONSTRAINT [FK_CollaborateurEntityContratTypeE]
     FOREIGN KEY ([CollaborateurEntity_matriculeE])
-    REFERENCES [dbo].[CollaborateurESet]
+    REFERENCES [dbo].[CollaborateursESet]
         ([matriculeE])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO

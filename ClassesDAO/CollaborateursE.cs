@@ -12,10 +12,10 @@ namespace ClassesDAO
     using System;
     using System.Collections.Generic;
     
-    public partial class CollaborateurE
+    public partial class CollaborateursE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CollaborateurE()
+        public CollaborateursE()
         {
             this.ContratTypeE = new HashSet<ContratTypeE>();
         }

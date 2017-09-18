@@ -6,14 +6,14 @@
     <edmx:StorageModels>
     <Schema Namespace="Entreprise.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="EntrepriseStoreContainer">
-    <EntitySet Name="CollaborateurESet" EntityType="Entreprise.Store.CollaborateurESet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CollaborateursESet" EntityType="Entreprise.Store.CollaborateursESet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ContratTypeESet" EntityType="Entreprise.Store.ContratTypeESet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ContratTypeESet_CdiE" EntityType="Entreprise.Store.ContratTypeESet_CdiE" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ContratTypeESet_ContratTemporaireE" EntityType="Entreprise.Store.ContratTypeESet_ContratTemporaireE" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ContratTypeESet_CddE" EntityType="Entreprise.Store.ContratTypeESet_CddE" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ContratTypeESet_StageE" EntityType="Entreprise.Store.ContratTypeESet_StageE" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="CollaborateurEntityContratTypeE" Association="Entreprise.Store.CollaborateurEntityContratTypeE">
-      <End Role="CollaborateurEntity" EntitySet="CollaborateurESet" />
+      <End Role="CollaborateurEntity" EntitySet="CollaborateursESet" />
       <End Role="ContratTypeE" EntitySet="ContratTypeESet" />
     </AssociationSet>
     <AssociationSet Name="FK_CdiE_inherits_ContratTypeE" Association="Entreprise.Store.FK_CdiE_inherits_ContratTypeE">
@@ -33,7 +33,7 @@
       <End Role="StageE" EntitySet="ContratTypeESet_StageE" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="CollaborateurESet">
+  <EntityType Name="CollaborateursESet">
     <Key>
       <PropertyRef Name="matriculeE" />
     </Key>
@@ -86,7 +86,7 @@
     <Property Name="idContratE" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="CollaborateurEntityContratTypeE">
-    <End Role="CollaborateurEntity" Type="Entreprise.Store.CollaborateurESet" Multiplicity="1" />
+    <End Role="CollaborateurEntity" Type="Entreprise.Store.CollaborateursESet" Multiplicity="1" />
     <End Role="ContratTypeE" Type="Entreprise.Store.ContratTypeESet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CollaborateurEntity">
@@ -158,14 +158,14 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Entreprise" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="EntrepriseContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CollaborateurESet" EntityType="Entreprise.CollaborateurE" />
+          <EntitySet Name="CollaborateursESet" EntityType="Entreprise.CollaborateursE" />
           <EntitySet Name="ContratTypeESet" EntityType="Entreprise.ContratTypeE" />
           <AssociationSet Name="CollaborateurEntityContratTypeE" Association="Entreprise.CollaborateurEntityContratTypeE">
-            <End Role="CollaborateurEntity" EntitySet="CollaborateurESet" />
+            <End Role="CollaborateurEntity" EntitySet="CollaborateursESet" />
             <End Role="ContratTypeE" EntitySet="ContratTypeESet" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="CollaborateurE" >
+        <EntityType Name="CollaborateursE" >
           <Key>
             <PropertyRef Name="matriculeE" />
           </Key>
@@ -203,7 +203,7 @@
           <Property Name="motifE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="100" />
         </EntityType>
         <Association Name="CollaborateurEntityContratTypeE">
-          <End Type="Entreprise.CollaborateurE" Role="CollaborateurEntity" Multiplicity="1" />
+          <End Type="Entreprise.CollaborateursE" Role="CollaborateurEntity" Multiplicity="1" />
           <End Type="Entreprise.ContratTypeE" Role="ContratTypeE" Multiplicity="*" />
         </Association>
       </Schema>
@@ -212,9 +212,9 @@
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EntrepriseStoreContainer" CdmEntityContainer="EntrepriseContainer">
-    <EntitySetMapping Name="CollaborateurESet">
-      <EntityTypeMapping TypeName="IsTypeOf(Entreprise.CollaborateurE)">
-        <MappingFragment StoreEntitySet="CollaborateurESet">
+    <EntitySetMapping Name="CollaborateursESet">
+      <EntityTypeMapping TypeName="IsTypeOf(Entreprise.CollaborateursE)">
+        <MappingFragment StoreEntitySet="CollaborateursESet">
           <ScalarProperty Name="matriculeE" ColumnName="matriculeE" />
           <ScalarProperty Name="civiliteE" ColumnName="civiliteE" />
           <ScalarProperty Name="nomE" ColumnName="nomE" />

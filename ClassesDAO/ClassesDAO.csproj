@@ -57,7 +57,7 @@
     <Compile Include="CdiE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
-    <Compile Include="CollaborateurE.cs">
+    <Compile Include="CollaborateursE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
     <Compile Include="ContratTemporaireE.cs">
@@ -116,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasseMetier\ClasseMetier.csproj">
+      <Project>{030C2412-8DE1-417D-B6E0-442FD0C812D9}</Project>
+      <Name>ClasseMetier</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

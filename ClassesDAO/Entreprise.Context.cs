@@ -25,7 +25,7 @@ namespace ClassesDAO
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CollaborateurE> CollaborateurESet { get; set; }
+        public virtual DbSet<CollaborateursE> CollaborateursESet { get; set; }
         public virtual DbSet<ContratTypeE> ContratTypeESet { get; set; }
     }
 }
