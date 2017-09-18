@@ -152,6 +152,10 @@
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassesDAO\ClassesDAO.csproj">
+      <Project>{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}</Project>
+      <Name>ClassesDAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
