@@ -27,7 +27,7 @@ namespace ClassesDAO
             {
                 leCollab = new Collaborateur(item.civiliteE, item.nomE, item.prenomE, item.situationE, item.actifE);
 
-
+                InstancieContratsCollaborateur(leCollab);
                 listeCollaborateurs.AddCollaborateur(leCollab);
             }
         }
@@ -42,11 +42,9 @@ namespace ClassesDAO
                 DonneesDao.DbContextEntreprise = new EntrepriseContainer();
             }
 
-            var query = from a in DonneesDao.DbContextEntreprise.ContratTypeESet
-                        //where a.
-                        select a;
-
-
+            var query = from b in DonneesDao.DbContextEntreprise.ContratTypeESet
+                        where b.CollaborateurEntity.matriculeE == leCollaborateur.Matricule
+                        select b;
 
             ContratType LeContratType = null;
 
@@ -68,10 +66,11 @@ namespace ClassesDAO
                 }
 
                 Console.WriteLine(item.ToString());
+                leCollaborateur.AddContrat(LeContratType);
 
             }
 
-            leCollaborateur.AddContrat(LeContratType);
+         
             
 
 

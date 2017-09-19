@@ -10,17 +10,16 @@ namespace ABIEnCouches
 {
     public class ctrlListerCollaborateur
     {
-        private Collaborateurs listeCollaborateurs;
+        Collaborateurs listeCollaborateurs = new Collaborateurs();
+        //private Collaborateurs listeCollaborateurs;
         private frmListCollab leForm;
 
 
         public ctrlListerCollaborateur()
         {
-            Collaborateurs listeCollaborateurs = new Collaborateurs();
+            
             Dao.instancieCollaborateurs(listeCollaborateurs);
 
-            Dao.InstancieContratsCollaborateur();
-            
             //this.instancieCollaborateurs();
             this.leForm = new frmListCollab(this.listeCollaborateurs);
             this.leForm.afficheCollaborateurs(this.listeCollaborateurs);

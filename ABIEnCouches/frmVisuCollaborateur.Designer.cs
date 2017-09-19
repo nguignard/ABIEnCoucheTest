@@ -143,7 +143,6 @@
             this.btnModifier.TabIndex = 20;
             this.btnModifier.Text = "&Modifier Collaborateur";
             this.btnModifier.UseVisualStyleBackColor = true;
-           
             // 
             // grdContrats
             // 
@@ -184,6 +183,7 @@
             // 
             this.grpCivil.Controls.Add(this.rdbF);
             this.grpCivil.Controls.Add(this.rdbM);
+            this.grpCivil.Enabled = false;
             this.grpCivil.Location = new System.Drawing.Point(133, 181);
             this.grpCivil.Name = "grpCivil";
             this.grpCivil.Size = new System.Drawing.Size(200, 36);

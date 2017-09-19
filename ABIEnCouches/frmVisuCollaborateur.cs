@@ -18,9 +18,6 @@ namespace ABIEnCouches
         {
             this.leCollaborateur = unCollab;
             InitializeComponent();
-
-
-
         }
 
 
@@ -42,11 +39,13 @@ namespace ABIEnCouches
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Voulez vous fermer la fenêtre, Yes pour confirmer", "Fermeture", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.Close();
+
+            //DialogResult dialogResult = MessageBox.Show("Voulez vous fermer la fenêtre, Yes pour confirmer", "Fermeture", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    this.Close();
+            //}
         }
 
     }

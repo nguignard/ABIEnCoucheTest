@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Entreprise" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
   <EntityContainer Name="EntrepriseContainer" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CollaborateurESet" EntityType="Entreprise.CollaborateurE" />
+    <EntitySet Name="CollaborateursESet" EntityType="Entreprise.CollaborateursE" />
     <EntitySet Name="ContratTypeESet" EntityType="Entreprise.ContratTypeE" />
     <AssociationSet Name="CollaborateurEntityContratTypeE" Association="Entreprise.CollaborateurEntityContratTypeE">
-      <End Role="CollaborateurEntity" EntitySet="CollaborateurESet" />
+      <End Role="CollaborateurEntity" EntitySet="CollaborateursESet" />
       <End Role="ContratTypeE" EntitySet="ContratTypeESet" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="CollaborateurE">
+  <EntityType Name="CollaborateursE">
     <Key>
       <PropertyRef Name="matriculeE" />
     </Key>
-    <Property Name="matriculeE" Type="Int16" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
+    <Property Name="matriculeE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" annotation:StoreGeneratedPattern="None" />
     <Property Name="civiliteE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="1" FixedLength="true" />
     <Property Name="nomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
     <Property Name="prenomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
@@ -32,7 +32,7 @@
       <PropertyRef Name="idContratE" />
     </Key>
     <NavigationProperty Name="CollaborateurEntity" Relationship="Entreprise.CollaborateurEntityContratTypeE" FromRole="ContratTypeE" ToRole="CollaborateurEntity" />
-    <Property Name="idContratE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
+    <Property Name="idContratE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" annotation:StoreGeneratedPattern="None" />
     <Property Name="dateDebutE" Type="DateTime" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
     <Property Name="qualificationE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
     <Property Name="statutE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
@@ -44,7 +44,7 @@
     <Property Name="motifE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="100" />
   </EntityType>
   <Association Name="CollaborateurEntityContratTypeE">
-    <End Type="Entreprise.CollaborateurE" Role="CollaborateurEntity" Multiplicity="1" />
+    <End Type="Entreprise.CollaborateursE" Role="CollaborateurEntity" Multiplicity="1" />
     <End Type="Entreprise.ContratTypeE" Role="ContratTypeE" Multiplicity="*" />
   </Association>
 </Schema>

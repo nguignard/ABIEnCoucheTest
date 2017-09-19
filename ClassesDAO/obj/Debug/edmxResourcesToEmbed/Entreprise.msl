@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EntrepriseStoreContainer" CdmEntityContainer="EntrepriseContainer">
-    <EntitySetMapping Name="CollaborateurESet">
-      <EntityTypeMapping TypeName="IsTypeOf(Entreprise.CollaborateurE)">
-        <MappingFragment StoreEntitySet="CollaborateurESet">
+    <EntitySetMapping Name="CollaborateursESet">
+      <EntityTypeMapping TypeName="IsTypeOf(Entreprise.CollaborateursE)">
+        <MappingFragment StoreEntitySet="CollaborateursESet">
           <ScalarProperty Name="matriculeE" ColumnName="matriculeE" />
           <ScalarProperty Name="civiliteE" ColumnName="civiliteE" />
           <ScalarProperty Name="nomE" ColumnName="nomE" />

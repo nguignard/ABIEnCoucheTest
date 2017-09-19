@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/18/2017 15:40:58
+-- Date Created: 09/19/2017 08:03:05
 -- Generated from EDMX file: C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\Entreprise.edmx
 -- --------------------------------------------------
 
@@ -37,8 +37,8 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[CollaborateurESet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CollaborateurESet];
+IF OBJECT_ID(N'[dbo].[CollaborateursESet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CollaborateursESet];
 GO
 IF OBJECT_ID(N'[dbo].[ContratTypeESet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ContratTypeESet];
@@ -62,7 +62,7 @@ GO
 
 -- Creating table 'CollaborateursESet'
 CREATE TABLE [dbo].[CollaborateursESet] (
-    [matriculeE] smallint  NOT NULL,
+    [matriculeE] int  NOT NULL,
     [civiliteE] nchar(1)  NOT NULL,
     [nomE] nvarchar(20)  NOT NULL,
     [prenomE] nvarchar(20)  NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE [dbo].[ContratTypeESet] (
     [statutE] nvarchar(20)  NOT NULL,
     [salaireE] int  NOT NULL,
     [finReelleE] datetime  NULL,
-    [CollaborateurEntity_matriculeE] smallint  NOT NULL
+    [CollaborateurEntity_matriculeE] int  NOT NULL
 );
 GO
 

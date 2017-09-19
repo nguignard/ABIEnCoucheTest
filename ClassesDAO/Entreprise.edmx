@@ -37,7 +37,7 @@
     <Key>
       <PropertyRef Name="matriculeE" />
     </Key>
-    <Property Name="matriculeE" Type="smallint" Nullable="false" />
+    <Property Name="matriculeE" Type="int" Nullable="false" />
     <Property Name="civiliteE" Type="nchar" Nullable="false" MaxLength="1" />
     <Property Name="nomE" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="prenomE" Type="nvarchar" Nullable="false" MaxLength="20" />
@@ -55,7 +55,7 @@
     <Property Name="statutE" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="salaireE" Type="int" Nullable="false" />
     <Property Name="finReelleE" Type="datetime" Nullable="true" />
-    <Property Name="CollaborateurEntity_matriculeE" Type="smallint" Nullable="false" />
+    <Property Name="CollaborateurEntity_matriculeE" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ContratTypeESet_CdiE">
     <Key>
@@ -169,7 +169,7 @@
           <Key>
             <PropertyRef Name="matriculeE" />
           </Key>
-          <Property Name="matriculeE" Type="Int16" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" annotation:StoreGeneratedPattern="None" />
+          <Property Name="matriculeE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" annotation:StoreGeneratedPattern="None" />
           <Property Name="civiliteE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="1" FixedLength="true" />
           <Property Name="nomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
           <Property Name="prenomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
