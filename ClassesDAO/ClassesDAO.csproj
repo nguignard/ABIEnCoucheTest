@@ -51,21 +51,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CddE.addOn.cs" />
     <Compile Include="CddE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cdi.addOn.cs" />
     <Compile Include="CdiE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
+    <Compile Include="CollaborateursE.addOn.cs" />
     <Compile Include="CollaborateursE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
+    <Compile Include="contratTemporaire.addOn.cs" />
     <Compile Include="ContratTemporaireE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
     <Compile Include="ContratTypeE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
+    <Compile Include="ContratTypeE.addOn.cs" />
     <Compile Include="Dao.cs" />
     <Compile Include="DonneesDao.cs" />
     <Compile Include="Entreprise.Context.cs">
@@ -84,6 +89,7 @@
       <DependentUpon>Entreprise.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stageE.addOn.cs" />
     <Compile Include="StageE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>

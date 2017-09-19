@@ -53,7 +53,7 @@
     <Property Name="dateDebutE" Type="datetime" Nullable="false" />
     <Property Name="qualificationE" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="statutE" Type="nvarchar" Nullable="false" MaxLength="20" />
-    <Property Name="salaireE" Type="int" Nullable="false" />
+    <Property Name="salaireE" Type="nvarchar(max)" Nullable="false" />
     <Property Name="finReelleE" Type="datetime" Nullable="true" />
     <Property Name="CollaborateurEntity_matriculeE" Type="int" Nullable="false" />
   </EntityType>
@@ -195,7 +195,7 @@
           <Property Name="dateDebutE" Type="DateTime" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
           <Property Name="qualificationE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
           <Property Name="statutE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
-          <Property Name="salaireE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
+          <Property Name="salaireE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
           <Property Name="finReelleE" Type="DateTime" cg:GetterAccess="Internal" cg:SetterAccess="Internal" Nullable="true" />
         </EntityType>
         <EntityType Name="ContratTemporaireE" BaseType="Entreprise.ContratTypeE">

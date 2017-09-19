@@ -39,6 +39,7 @@ namespace ABIEnCouches
             if(ctrl.Result == DialogResult.OK)
             {
                 this.listeCollaborateurs.AddCollaborateur(ctrl.LeCollaborateur);
+                Dao.AddCollaborateur(ctrl.LeCollaborateur, listeCollaborateurs);
                 this.leForm.afficheCollaborateurs(this.listeCollaborateurs);
 
             }

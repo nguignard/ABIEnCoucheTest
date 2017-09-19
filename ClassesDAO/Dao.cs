@@ -10,7 +10,10 @@ namespace ClassesDAO
     public class Dao
     {
 
-
+        /// <summary>
+        /// instancieCollaborateurs: créer la liste des collaborateurs depuis la BD
+        /// </summary>
+        /// <param name="listeCollaborateurs"></param>
         public static void instancieCollaborateurs(Collaborateurs listeCollaborateurs)
         {
             if (DonneesDao.DbContextEntreprise == null)
@@ -32,9 +35,10 @@ namespace ClassesDAO
             }
         }
 
-
-
-
+        /// <summary>
+        /// InstancieContratsCollaborateur: ajoute les contrats d'un collaborateur à partir de la base de donnee
+        /// </summary>
+        /// <param name="leCollaborateur"></param>
         public static void InstancieContratsCollaborateur(Collaborateur leCollaborateur)
         {
             if(DonneesDao.DbContextEntreprise == null)
@@ -76,11 +80,25 @@ namespace ClassesDAO
 
         }
 
-        
 
 
 
 
+        public static void AddCollaborateur(Collaborateur leCollaborateur, Collaborateurs liste)
+        {
+            if(DonneesDao.DbContextEntreprise == null)
+            {
+                DonneesDao.DbContextEntreprise = new EntrepriseContainer();
+            }
 
+          
+
+
+
+            CollaborateursE c = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
+
+            //DonneesDao.DbContextEntreprise.CollaborateursESet.Add()
+
+        }
     }
 }
