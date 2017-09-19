@@ -33,6 +33,7 @@
             this.btnFermer = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblErreur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdCollaborateurs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,11 +82,22 @@
             this.txtSearch.Size = new System.Drawing.Size(725, 20);
             this.txtSearch.TabIndex = 2;
             // 
+            // lblErreur
+            // 
+            this.lblErreur.AutoSize = true;
+            this.lblErreur.ForeColor = System.Drawing.Color.Red;
+            this.lblErreur.Location = new System.Drawing.Point(9, 451);
+            this.lblErreur.Name = "lblErreur";
+            this.lblErreur.Size = new System.Drawing.Size(51, 13);
+            this.lblErreur.TabIndex = 7;
+            this.lblErreur.Text = "dfgsdgdg";
+            // 
             // frmListCollab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 519);
+            this.Controls.Add(this.lblErreur);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnFermer);
@@ -107,5 +119,6 @@
         internal System.Windows.Forms.Button btnFermer;
         internal System.Windows.Forms.Button btnSearch;
         internal System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblErreur;
     }
 }

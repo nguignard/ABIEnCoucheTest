@@ -32,7 +32,7 @@ namespace ABIEnCouches
         {
             get
             {
-                return newCollaborateur;
+                return this.newCollaborateur;
             }
         }
         
@@ -57,6 +57,7 @@ namespace ABIEnCouches
 
                 this.instancieContrat();
                 this.newCollaborateur.AddContrat(newContrat);
+                
 
                 return true;
             }
@@ -189,7 +190,9 @@ namespace ABIEnCouches
 
         //FONCTIONS-----------------------------------
 
-
+            /// <summary>
+            /// Affiche a blanc un contrat
+            /// </summary>
         internal void WhiteContrat()
         {
             this.txtEcole.Text = "";
@@ -197,12 +200,12 @@ namespace ABIEnCouches
             this.txtMotif.Text = "";
             this.txtQualif.Text = "";
             this.txtSalaire.Text = "";
-            this.txtStatut.Text = "CELIBATAIRE";
+            this.txtStatut.Text = "";
             this.rdbCDI.Checked = true;
         }
 
     /// <summary>
-    /// whiteForm() réinitialise le form en blanc
+    /// whiteForm() réinitialise le collaborateur en blanc
     /// </summary>
     internal void whiteCollaborateur()
     {
@@ -210,6 +213,7 @@ namespace ABIEnCouches
         this.txtPrenom.Text = "";
         this.cmbFamille.Items.Clear();
         this.cmbFamille.Items.AddRange(new String[] { "CELIBATAIRE", "MARIE", "DIVORCE" });
+        this.cmbFamille.SelectedIndex = this.cmbFamille.FindString("CELIBATAIRE");
         this.rdbM.Checked = true;
 
         this.WhiteContrat();

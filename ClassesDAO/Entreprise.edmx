@@ -42,7 +42,7 @@
     <Property Name="nomE" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="prenomE" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="situationE" Type="nvarchar" Nullable="false" MaxLength="20" />
-    <Property Name="photoE" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="photoE" Type="nvarchar" Nullable="true" MaxLength="100" />
     <Property Name="actifE" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="ContratTypeESet">
@@ -174,7 +174,7 @@
           <Property Name="nomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
           <Property Name="prenomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
           <Property Name="situationE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
-          <Property Name="photoE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="100" />
+          <Property Name="photoE" Type="String" Nullable="true" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="100" />
           <Property Name="actifE" Type="Boolean" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
           <NavigationProperty Name="ContratTypeE" Relationship="Entreprise.CollaborateurEntityContratTypeE" FromRole="CollaborateurEntity" ToRole="ContratTypeE" />
         </EntityType>

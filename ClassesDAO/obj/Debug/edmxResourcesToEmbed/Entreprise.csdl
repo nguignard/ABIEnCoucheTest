@@ -17,7 +17,7 @@
     <Property Name="nomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
     <Property Name="prenomE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
     <Property Name="situationE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
-    <Property Name="photoE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="100" />
+    <Property Name="photoE" Type="String" Nullable="true" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="100" />
     <Property Name="actifE" Type="Boolean" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
     <NavigationProperty Name="ContratTypeE" Relationship="Entreprise.CollaborateurEntityContratTypeE" FromRole="CollaborateurEntity" ToRole="ContratTypeE" />
   </EntityType>

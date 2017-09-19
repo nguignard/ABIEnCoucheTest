@@ -19,6 +19,8 @@ namespace ABIEnCouches
         {
             
             Dao.instancieCollaborateurs(listeCollaborateurs);
+            
+
 
             //this.instancieCollaborateurs();
             this.leForm = new frmListCollab(this.listeCollaborateurs);
@@ -38,8 +40,29 @@ namespace ABIEnCouches
 
             if(ctrl.Result == DialogResult.OK)
             {
-                this.listeCollaborateurs.AddCollaborateur(ctrl.LeCollaborateur);
-                Dao.AddCollaborateur(ctrl.LeCollaborateur, listeCollaborateurs);
+                try
+                {
+                    this.listeCollaborateurs.AddCollaborateur(ctrl.LeCollaborateur);
+
+                    try
+                    {
+                        Dao.AddCollaborateur(ctrl.LeCollaborateur);
+                    }
+                    catch (Exception ex)
+                    {
+                        this.leForm.LeveErreur(ex);
+
+                        this.listeCollaborateurs.removeCollaborateur(ctrl.LeCollaborateur.Matricule, typeof(ctrlListerCollaborateur).ToString());
+                        //Dao.RemoveCollaborateur(ctrl.LeCollaborateur.Matricule, typeof(ctrlListerCollaborateur).ToString());
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    this.leForm.LeveErreur(ex);
+                }
+                
+                
                 this.leForm.afficheCollaborateurs(this.listeCollaborateurs);
             }
         }

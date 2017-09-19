@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/19/2017 11:06:28
+-- Date Created: 09/19/2017 14:51:20
 -- Generated from EDMX file: C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\Entreprise.edmx
 -- --------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE [dbo].[CollaborateursESet] (
     [nomE] nvarchar(20)  NOT NULL,
     [prenomE] nvarchar(20)  NOT NULL,
     [situationE] nvarchar(20)  NOT NULL,
-    [photoE] nvarchar(100)  NOT NULL,
+    [photoE] nvarchar(100)  NULL,
     [actifE] bit  NOT NULL
 );
 GO

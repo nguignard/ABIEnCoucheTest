@@ -84,21 +84,33 @@ namespace ClassesDAO
 
 
 
-        public static void AddCollaborateur(Collaborateur leCollaborateur, Collaborateurs liste)
+        public static void AddCollaborateur(Collaborateur leCollaborateur)
         {
             if(DonneesDao.DbContextEntreprise == null)
             {
                 DonneesDao.DbContextEntreprise = new EntrepriseContainer();
             }
-
-          
-
-
-
             CollaborateursE c = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
 
-            //DonneesDao.DbContextEntreprise.CollaborateursESet.Add()
+            try
+            {
+                DonneesDao.DbContextEntreprise.CollaborateursESet.Add(c);
+                DonneesDao.DbContextEntreprise.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            
+
 
         }
+
+
+
+
+
+
     }
 }

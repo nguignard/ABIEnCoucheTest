@@ -118,9 +118,9 @@
             // 
             this.cmbFamille.FormattingEnabled = true;
             this.cmbFamille.Items.AddRange(new object[] {
-            "Celibataire",
-            "Marie",
-            "Divorce"});
+            "CELIBATAIRE",
+            "MARIE",
+            "DIVORCE"});
             this.cmbFamille.Location = new System.Drawing.Point(142, 271);
             this.cmbFamille.Name = "cmbFamille";
             this.cmbFamille.Size = new System.Drawing.Size(200, 21);

@@ -39,8 +39,9 @@ namespace ABIEnCouches
             Application.Exit();
         }
 
-
-
-
+        internal void LeveErreur(Exception ex)
+        {
+            this.lblErreur.Text = "Erreur = " + ex.Message;
+        }
     }
 }

@@ -62,6 +62,18 @@ namespace ABIEnCouches
 
         }
 
+
+
+        public void removeCollaborateur(int matricule, string leDemandeur)
+        {
+            if(leDemandeur == "ABIEnCouches.ctrlListerCollaborateur" )
+            if (listCollab.ContainsKey(matricule))
+            {
+                this.listCollab.Remove(matricule);
+            }
+
+        }
+
         /// <summary>
         /// RestituerCollaborateur(int matricule)
         /// </summary>

@@ -12,7 +12,7 @@ namespace ABIEnCouches
         private frmAjouterCollab leForm;
 
         private Collaborateur leCollaborateur;
-        private ContratType leContrat; 
+        //private ContratType leContrat; 
         private DialogResult result;
 
         public ctrlAjouterCollaborateur()
@@ -41,8 +41,7 @@ namespace ABIEnCouches
                 return result;
             }
         }
-
-
+        
         //FONCTIONS-------------------------------------------------------------
         private void btnValider_Click(object sender, EventArgs e)
         {
@@ -53,6 +52,10 @@ namespace ABIEnCouches
                     this.leForm.DialogResult = DialogResult.OK;
                     this.result = DialogResult.OK;
                     this.leCollaborateur = this.leForm.NewCollaborateur;
+                    leForm.Close();
+
+
+
                 }
                 else
                 {
