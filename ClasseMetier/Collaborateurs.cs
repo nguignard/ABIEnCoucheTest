@@ -126,12 +126,12 @@ namespace ABIEnCouches
             return b;
         }
 
+        private void modifierCollaborateur(Collaborateur newCollaborateur)
+        {
 
-        ///// <pdGenerated>default removeAll</pdGenerated>
-        //public void RemoveAllContratType()
-        //{
-        //    if (contrats != null)
-        //        contrats.Clear();
-        //}
+
+        }
+
+
     }
 }

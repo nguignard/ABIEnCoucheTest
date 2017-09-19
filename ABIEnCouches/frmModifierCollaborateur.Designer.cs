@@ -97,15 +97,15 @@
             this.btnValider.TabIndex = 36;
             this.btnValider.Text = "&Valider";
             this.btnValider.UseVisualStyleBackColor = true;
+          
             // 
             // cmbFamille
             // 
-            this.cmbFamille.Enabled = false;
             this.cmbFamille.FormattingEnabled = true;
             this.cmbFamille.Items.AddRange(new object[] {
-            "Celibataire",
-            "Marie",
-            "Divorce"});
+            "CELIBATAIRE",
+            "MARIE",
+            "DIVORCE"});
             this.cmbFamille.Location = new System.Drawing.Point(133, 271);
             this.cmbFamille.Name = "cmbFamille";
             this.cmbFamille.Size = new System.Drawing.Size(200, 21);
@@ -124,7 +124,6 @@
             // 
             this.txtNom.Location = new System.Drawing.Point(133, 223);
             this.txtNom.Name = "txtNom";
-            this.txtNom.ReadOnly = true;
             this.txtNom.Size = new System.Drawing.Size(200, 20);
             this.txtNom.TabIndex = 33;
             // 
@@ -132,7 +131,6 @@
             // 
             this.txtPrenom.Location = new System.Drawing.Point(133, 248);
             this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.ReadOnly = true;
             this.txtPrenom.Size = new System.Drawing.Size(200, 20);
             this.txtPrenom.TabIndex = 32;
             // 
@@ -189,6 +187,7 @@
             this.btnAnnuler.TabIndex = 39;
             this.btnAnnuler.Text = "&Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnFermer
             // 
@@ -198,6 +197,7 @@
             this.btnFermer.TabIndex = 40;
             this.btnFermer.Text = "&Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
+            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // frmModifierCollaborateur
             // 

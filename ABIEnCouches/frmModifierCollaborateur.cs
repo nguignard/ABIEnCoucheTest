@@ -13,13 +13,13 @@ namespace ABIEnCouches
     public partial class frmModifierCollaborateur : Form
     {
 
-        Collaborateur leCollaborateur;
+        Collaborateur oldCollaborateur;
 
         public frmModifierCollaborateur(Collaborateur unCollaborateur)
         {
-            this.leCollaborateur = unCollaborateur;
+            this.oldCollaborateur = unCollaborateur;
             InitializeComponent();
-            this.AfficheCollaborateur(unCollaborateur);
+            this.AfficheCollaborateur(oldCollaborateur);
 
         }
 
@@ -33,13 +33,44 @@ namespace ABIEnCouches
             this.txtPrenom.Text = unCollab.PrenomCollab;
             this.rdbM.Checked = unCollab.Civilite == "M" ? true : false;
             this.rdbF.Checked = unCollab.Civilite == "F" ? true : false;
-            this.cmbFamille.SelectedItem = unCollab.SituationFamiliale;
-
-            //this.grdContrats.DataSource = unCollab.GetContrats();
-            //this.grdContrats.Refresh();
+            //ComboBox1.FindString(txt)
+            this.cmbFamille.SelectedItem = this.cmbFamille.FindString( unCollab.SituationFamiliale);
             this.btnFermer.Enabled = true;
         }
 
+        internal void modifieCollaborateur()
+        {
+
+
+
+
+            //Collaborateur newCollab = new Collaborateur(this.rdbM.Checked ? "M" : "F", this.txtNom.Text, this.txtPrenom.Text, this.cmbFamille.SelectedValue, true);
+
+
+
+
+
+            //TODO
+        }
+
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Voulez vous vraiment Fermer sans changement, Yes pour confirmer", "Fermer", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Voulez vous réinitialiser les champs, Yes pour confirmer", "Réinitialisation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.AfficheCollaborateur(oldCollaborateur);
+                
+            }
+        }
 
     }
 }
