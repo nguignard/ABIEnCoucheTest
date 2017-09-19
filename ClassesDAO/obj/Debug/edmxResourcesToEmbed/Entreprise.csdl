@@ -36,7 +36,7 @@
     <Property Name="dateDebutE" Type="DateTime" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
     <Property Name="qualificationE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
     <Property Name="statutE" Type="String" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" MaxLength="20" />
-    <Property Name="salaireE" Type="Int32" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
+    <Property Name="salaireE" Type="Decimal" Nullable="false" cg:GetterAccess="Internal" cg:SetterAccess="Internal" />
     <Property Name="finReelleE" Type="DateTime" cg:GetterAccess="Internal" cg:SetterAccess="Internal" Nullable="true" />
   </EntityType>
   <EntityType Name="ContratTemporaireE" BaseType="Entreprise.ContratTypeE">

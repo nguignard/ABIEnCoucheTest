@@ -11,9 +11,8 @@ namespace ABIEnCouches
 {
     public class Cdd : ContratTemporaire
     {
-        public Cdd(DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel,
-            DateTime datFinContrat, String motif):
-            base(dateDebutContrat,  qualification,  statut,  salaireContractuel, 
+        public Cdd(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel,
+            DateTime datFinContrat, String motif): base(idContrat, dateDebutContrat,  qualification,  statut,  salaireContractuel, 
                 datFinContrat,  motif)
         {
         }

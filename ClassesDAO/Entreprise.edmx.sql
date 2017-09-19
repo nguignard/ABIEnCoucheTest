@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/19/2017 10:03:12
+-- Date Created: 09/19/2017 10:06:39
 -- Generated from EDMX file: C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\Entreprise.edmx
 -- --------------------------------------------------
 
@@ -78,7 +78,7 @@ CREATE TABLE [dbo].[ContratTypeESet] (
     [dateDebutE] datetime  NOT NULL,
     [qualificationE] nvarchar(20)  NOT NULL,
     [statutE] nvarchar(20)  NOT NULL,
-    [salaireE] nvarchar(max)  NOT NULL,
+    [salaireE] decimal(18,0)  NOT NULL,
     [finReelleE] datetime  NULL,
     [CollaborateurEntity_matriculeE] int  NOT NULL
 );

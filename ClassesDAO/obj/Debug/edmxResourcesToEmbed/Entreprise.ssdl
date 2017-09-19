@@ -48,7 +48,7 @@
     <Property Name="dateDebutE" Type="datetime" Nullable="false" />
     <Property Name="qualificationE" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="statutE" Type="nvarchar" Nullable="false" MaxLength="20" />
-    <Property Name="salaireE" Type="int" Nullable="false" />
+    <Property Name="salaireE" Type="decimal" Nullable="false" />
     <Property Name="finReelleE" Type="datetime" Nullable="true" />
     <Property Name="CollaborateurEntity_matriculeE" Type="int" Nullable="false" />
   </EntityType>

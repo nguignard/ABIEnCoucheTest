@@ -18,7 +18,7 @@ namespace ClassesDAO
         internal System.DateTime dateDebutE { get; set; }
         internal string qualificationE { get; set; }
         internal string statutE { get; set; }
-        internal string salaireE { get; set; }
+        internal decimal salaireE { get; set; }
         internal Nullable<System.DateTime> finReelleE { get; set; }
     
         public virtual CollaborateursE CollaborateurEntity { get; set; }

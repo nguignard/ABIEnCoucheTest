@@ -83,7 +83,7 @@ namespace ABIEnCouches
         {
                 if (this.rdbCDI.Checked)
                 {
-                    newContrat = new Cdi(
+                    newContrat = new Cdi(1,
                         this.dateDebut.Value.Date,
                         this.txtQualif.Text,
                         this.txtStatut.Text,
@@ -93,7 +93,7 @@ namespace ABIEnCouches
                 }
                 else if (this.rdbCDD.Checked)
                 {
-                    newContrat = new Cdd(
+                    newContrat = new Cdd(1,
                      this.dateDebut.Value.Date,
                      this.txtQualif.Text,
                      this.txtStatut.Text,
@@ -105,7 +105,7 @@ namespace ABIEnCouches
                 }
                 else
                 {
-                    newContrat = new Stagiaire(
+                    newContrat = new Stagiaire(1,
                       this.txtEcole.Text,
                       this.txtMission.Text,
                        this.txtMotif.Text,

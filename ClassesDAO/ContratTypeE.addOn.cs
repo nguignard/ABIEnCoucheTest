@@ -12,14 +12,14 @@ namespace ClassesDAO
         {
         }
 
-        public ContratTypeE(DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
+        public ContratTypeE(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, DateTime? dateFinReelle)
         {
-            //this.IdContrat = GetNewIdContrat();
-
+            this.idContratE = idContrat;
             this.dateDebutE = dateDebutContrat;
             this.qualificationE = qualification;
             this.statutE = statut;
             this.salaireE = salaireContractuel;
+            this.finReelleE = dateFinReelle;
     }
 
     }

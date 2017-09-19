@@ -14,9 +14,9 @@ namespace ABIEnCouches
         private String ecole;
         private String mission;
 
-        public Stagiaire(String ecole, String mission, 
+        public Stagiaire(int idContrat, String ecole, String mission, 
             String motif, DateTime dateDebutContrat, DateTime datFinContrat, String qualification, String statut,  Decimal salaireContractuel) : 
-            base(   dateDebutContrat,  qualification,  statut,  salaireContractuel,  datFinContrat,  motif)
+            base( idContrat,  dateDebutContrat,  qualification,  statut,  salaireContractuel,  datFinContrat,  motif)
         {
             this.ecole = Ecole;
             this.Mission = Mission;

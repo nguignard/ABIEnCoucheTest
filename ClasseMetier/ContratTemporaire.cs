@@ -25,8 +25,8 @@ namespace ABIEnCouches
         /// <param name="salaireContractuel"></param>
         /// <param name="datFinContrat"></param>
         /// <param name="motif"></param>
-        public ContratTemporaire(DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, 
-            DateTime datFinContrat, String motif) : base(dateDebutContrat, qualification,  statut,  salaireContractuel)
+        public ContratTemporaire(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, 
+            DateTime datFinContrat, String motif) : base(idContrat, dateDebutContrat, qualification,  statut,  salaireContractuel)
         {
             this.DateFinContrat = datFinContrat;
             this.Motif = motif;

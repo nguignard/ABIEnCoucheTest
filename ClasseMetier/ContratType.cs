@@ -27,7 +27,7 @@ namespace ABIEnCouches
         protected System.Collections.Generic.SortedDictionary<int,Avenant> avenants;
 
         //CONSTRUCTEUR -------------------------------------------------------
-        public ContratType(DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
+        public ContratType(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
         {
             this.IdContrat = GetNewIdContrat();
             this.DateDebutContrat = dateDebutContrat;
@@ -36,6 +36,8 @@ namespace ABIEnCouches
             this.SalaireContractuel = salaireContractuel;
         }
         
+
+
 
         //GET SET--------------------------------------------------------------
        

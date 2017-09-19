@@ -63,7 +63,7 @@
     <Compile Include="CollaborateursE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
-    <Compile Include="contratTemporaire.addOn.cs" />
+    <Compile Include="contratTemporaireE.addOn.cs" />
     <Compile Include="ContratTemporaireE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>

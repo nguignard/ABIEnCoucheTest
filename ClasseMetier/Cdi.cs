@@ -12,8 +12,9 @@ namespace ABIEnCouches
     public class Cdi : ContratType
     {
 
-        public Cdi( DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel):base(  dateDebutContrat,  qualification,  statut, salaireContractuel)
-        {
+        public Cdi(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
+            :base(      idContrat,          dateDebutContrat,       qualification,          statut,         salaireContractuel)
+        {       
 
         }
 

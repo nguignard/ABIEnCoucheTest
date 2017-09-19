@@ -56,17 +56,17 @@ namespace ClassesDAO
             {
                 if(item is CdiE)
                 {
-                    LeContratType = new Cdi(item.dateDebutE,item.qualificationE.Trim(),item.statutE.Trim(),item.salaireE);
+                    LeContratType = new Cdi(item.idContratE, item.dateDebutE,item.qualificationE.Trim(),item.statutE.Trim(),item.salaireE);
                 }
 
                 if(item is CddE)
                 {
-                    LeContratType = new Cdd(item.dateDebutE, item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE, ((CddE)item).dateFinE, ((CddE)item).motifE.Trim());
+                    LeContratType = new Cdd(item.idContratE, item.dateDebutE, item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE, ((CddE)item).dateFinE, ((CddE)item).motifE.Trim());
                 }
 
                 if(item is StageE)
                 {
-                    LeContratType = new Stagiaire(((StageE)item).ecoleE.Trim(), ((StageE)item).missionE.Trim(), ((StageE)item).motifE.Trim(), item.dateDebutE, ((StageE)item).dateFinE , item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE);
+                    LeContratType = new Stagiaire(item.idContratE, ((StageE)item).ecoleE.Trim(), ((StageE)item).missionE.Trim(), ((StageE)item).motifE.Trim(), item.dateDebutE, ((StageE)item).dateFinE , item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE);
                 }
 
                 Console.WriteLine(item.ToString());
