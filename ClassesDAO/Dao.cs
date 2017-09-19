@@ -92,9 +92,20 @@ namespace ClassesDAO
             }
             CollaborateursE c = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
 
+            //ContratTypeE c;
+
+
+
+            //if(leCollaborateur.ListerContrats)
+
+
+
+
             try
             {
                 DonneesDao.DbContextEntreprise.CollaborateursESet.Add(c);
+                    //DonneesDao.DbContextEntreprise.ContratTypeESet
+
                 DonneesDao.DbContextEntreprise.SaveChanges();
             }
             catch (Exception ex)

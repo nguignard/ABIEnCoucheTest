@@ -20,7 +20,6 @@ namespace ABIEnCouches
             this.oldCollaborateur = unCollaborateur;
             InitializeComponent();
             this.AfficheCollaborateur(oldCollaborateur);
-
         }
 
 
@@ -33,18 +32,25 @@ namespace ABIEnCouches
             this.txtPrenom.Text = unCollab.PrenomCollab;
             this.rdbM.Checked = unCollab.Civilite == "M" ? true : false;
             this.rdbF.Checked = unCollab.Civilite == "F" ? true : false;
-            //ComboBox1.FindString(txt)
-            this.cmbFamille.SelectedItem = this.cmbFamille.FindString( unCollab.SituationFamiliale);
+            this.cmbFamille.SelectedItem = this.cmbFamille.FindString(unCollab.SituationFamiliale);
             this.btnFermer.Enabled = true;
         }
 
         internal void modifieCollaborateur()
         {
 
+            try
+            {
+                Collaborateur newCollab = new Collaborateur(this.rdbM.Checked ? "M" : "F", this.txtNom.Text, this.txtPrenom.Text, this.cmbFamille.SelectedValue.ToString(), true);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
 
 
-            //Collaborateur newCollab = new Collaborateur(this.rdbM.Checked ? "M" : "F", this.txtNom.Text, this.txtPrenom.Text, this.cmbFamille.SelectedValue, true);
 
 
 
@@ -53,6 +59,13 @@ namespace ABIEnCouches
             //TODO
         }
 
+
+
+        /// <summary>
+        /// btnFermer_Click ferme la fenetre de modif collaborateur sans changement
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFermer_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Voulez vous vraiment Fermer sans changement, Yes pour confirmer", "Fermer", MessageBoxButtons.YesNo);
@@ -62,6 +75,11 @@ namespace ABIEnCouches
             }
         }
 
+        /// <summary>
+        /// btnAnnuler_Click remets les champs d'un collaborateurs tels qu'ils etaient au debut 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Voulez vous réinitialiser les champs, Yes pour confirmer", "Réinitialisation", MessageBoxButtons.YesNo);

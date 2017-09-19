@@ -12,7 +12,7 @@ namespace ABIEnCouches
         private frmAjouterCollab leForm;
 
         private Collaborateur leCollaborateur;
-        //private ContratType leContrat; 
+        private ContratType leContrat;
         private DialogResult result;
 
         public ctrlAjouterCollaborateur()

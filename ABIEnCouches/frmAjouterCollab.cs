@@ -55,7 +55,7 @@ namespace ABIEnCouches
                                                         this.cmbFamille.SelectedItem.ToString(),
                                                         true);
 
-                this.instancieContrat();
+               this.instancieContrat();
                 this.newCollaborateur.AddContrat(newContrat);
                 
 
@@ -116,6 +116,9 @@ namespace ABIEnCouches
                       this.txtStatut.Text,
                       Convert.ToDecimal(this.txtSalaire.Text)
                     );
+
+                //return newContrat;
+
                 }
         }
 
