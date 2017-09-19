@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace ClassesDAO
 {
-    class contratTemporaireE
+    public partial class ContratTemporaireE : ContratTypeE
     {
-        public contratTemporaireE()
+        public ContratTemporaireE()
         {
         }
 
-        public contratTemporaireE(int   idContrat, DateTime dateDebutContrat, String    qualification, String statut, Decimal salaireContractuel, DateTime? dateFinReelle
-            ,DateTime dateFin, string motif)
-            :base(                      idContrat,          dateDebutContrat,           qualification,          statut,         salaireContractuel,         dateFinReelle,
-                       dateFin,      motif)
+        public ContratTemporaireE(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, DateTime? dateFinReelle,
+            DateTime dateFin, string motif)
+            :base( idContrat,  dateDebutContrat,  qualification,  statut,  salaireContractuel, dateFinReelle)
         {
-            this.
+            this.dateFinE = dateFin;
+            this.motifE = motif;
         }
+
     }
 }

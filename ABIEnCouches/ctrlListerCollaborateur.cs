@@ -41,9 +41,7 @@ namespace ABIEnCouches
                 this.listeCollaborateurs.AddCollaborateur(ctrl.LeCollaborateur);
                 Dao.AddCollaborateur(ctrl.LeCollaborateur, listeCollaborateurs);
                 this.leForm.afficheCollaborateurs(this.listeCollaborateurs);
-
             }
-
         }
 
         private void grdCollaborateurs_DoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -64,14 +62,6 @@ namespace ABIEnCouches
         /// </summary>
         private void instancieCollaborateurs()
         {
-
-
-
-
-
-
-
-
             //listeCollaborateurs = new Collaborateurs();
             //Collaborateur collaborateur = new Collaborateur("M", "DUPOND", "Roger", "MARIE", true);
             //Cdd contrat = new Cdd(new DateTime(2010, 5, 5).Date, "Chef de Projet", "Cadre", 2000, new DateTime(2011, 05, 05).Date, "il fait beau");

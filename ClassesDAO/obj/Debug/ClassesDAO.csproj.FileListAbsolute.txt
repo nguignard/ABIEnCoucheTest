@@ -19,8 +19,8 @@ C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\bin\Debug\ClasseMetier.pd
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\bin\Debug\EntityFramework.xml
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\obj\Debug\ClassesDAO.csprojResolveAssemblyReference.cache
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\obj\Debug\ClassesDAO.csproj.CoreCompileInputs.cache
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\obj\Debug\ClassesDAO.dll
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\obj\Debug\ClassesDAO.pdb
-C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClassesDAO\bin\Debug\fr\EntityFramework.SqlServer.resources.dll

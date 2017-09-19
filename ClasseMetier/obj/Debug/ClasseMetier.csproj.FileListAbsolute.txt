@@ -12,4 +12,3 @@ C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClasseMetier\bin\Debug\ClasseMetier.
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClasseMetier\obj\Debug\ClasseMetier.csproj.CoreCompileInputs.cache
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClasseMetier\obj\Debug\ClasseMetier.dll
 C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClasseMetier\obj\Debug\ClasseMetier.pdb
-C:\Users\CDI14\Source\Repos\ABIEnCoucheTest\ClasseMetier\obj\Debug\ClasseMetier.csprojResolveAssemblyReference.cache

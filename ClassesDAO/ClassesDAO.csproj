@@ -63,7 +63,7 @@
     <Compile Include="CollaborateursE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
-    <Compile Include="contratTemporaireE.addOn.cs" />
+    <Compile Include="ContratTemporaireE.addOn.cs" />
     <Compile Include="ContratTemporaireE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
@@ -89,7 +89,7 @@
       <DependentUpon>Entreprise.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="stageE.addOn.cs" />
+    <Compile Include="StageE.addOn.cs" />
     <Compile Include="StageE.cs">
       <DependentUpon>Entreprise.tt</DependentUpon>
     </Compile>
