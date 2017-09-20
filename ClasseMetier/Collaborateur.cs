@@ -236,8 +236,6 @@ namespace ABIEnCouches
             }
         }
 
-
-
         public int GetNewMatricule()
         {
            return Donnees.CompteurCollaborateur++;
@@ -330,8 +328,6 @@ namespace ABIEnCouches
         }
 
 
-
-
         //GESTION COLLECTION DE CONTRATS--------------------------------------------------------------------------------
     
 
@@ -422,13 +418,12 @@ namespace ABIEnCouches
             DataRow dr;
             foreach(ContratType contrat in contrats.Values)
             {
-                Type leType = contrat.GetType();
-
-                Console.WriteLine(leType.ToString());
+                string s = contrat.GetType().ToString();
+                int found = s.IndexOf(".");
 
                 dr = dtContrats.NewRow();
                 dr[0] = contrat.IdContrat;
-                dr[1] = leType.ToString();
+                dr[1] = s.Substring(found+1).ToUpper();
                 dr[2] = contrat.DateDebutContrat.Date.ToString();
                 dtContrats.Rows.Add(dr);
             }
