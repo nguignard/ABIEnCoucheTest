@@ -14,7 +14,13 @@ namespace ClassesDAO
     
     public partial class CollaborateursE
     {
-         
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CollaborateursE()
+        {
+            this.ContratTypeE = new HashSet<ContratTypeE>();
+        }
+
+
         internal int matriculeE { get; set; }
         internal string civiliteE { get; set; }
         internal string nomE { get; set; }

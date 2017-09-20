@@ -97,10 +97,10 @@
             this.btnValider.TabIndex = 36;
             this.btnValider.Text = "&Valider";
             this.btnValider.UseVisualStyleBackColor = true;
-          
             // 
             // cmbFamille
             // 
+            this.cmbFamille.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFamille.FormattingEnabled = true;
             this.cmbFamille.Items.AddRange(new object[] {
             "CELIBATAIRE",
@@ -109,7 +109,7 @@
             this.cmbFamille.Location = new System.Drawing.Point(133, 271);
             this.cmbFamille.Name = "cmbFamille";
             this.cmbFamille.Size = new System.Drawing.Size(200, 21);
-            this.cmbFamille.TabIndex = 35;
+            this.cmbFamille.TabIndex = 3;
             // 
             // txtNumeroMatricule
             // 
@@ -125,14 +125,14 @@
             this.txtNom.Location = new System.Drawing.Point(133, 223);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(200, 20);
-            this.txtNom.TabIndex = 33;
+            this.txtNom.TabIndex = 1;
             // 
             // txtPrenom
             // 
             this.txtPrenom.Location = new System.Drawing.Point(133, 248);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(200, 20);
-            this.txtPrenom.TabIndex = 32;
+            this.txtPrenom.TabIndex = 2;
             // 
             // pctBox
             // 

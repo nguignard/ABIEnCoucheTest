@@ -56,7 +56,7 @@
             this.btnAjouter.Location = new System.Drawing.Point(662, 487);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(75, 23);
-            this.btnAjouter.TabIndex = 4;
+            this.btnAjouter.TabIndex = 3;
             this.btnAjouter.Text = "&Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
             // 
@@ -65,26 +65,28 @@
             this.btnFermer.Location = new System.Drawing.Point(743, 487);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(75, 23);
-            this.btnFermer.TabIndex = 5;
+            this.btnFermer.TabIndex = 4;
             this.btnFermer.Text = "&Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // btnSearch
             // 
+            this.btnSearch.Enabled = false;
             this.btnSearch.Location = new System.Drawing.Point(743, 64);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "&Rechercher";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
+            this.txtSearch.Enabled = false;
             this.txtSearch.Location = new System.Drawing.Point(12, 67);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(725, 20);
-            this.txtSearch.TabIndex = 2;
+            this.txtSearch.TabIndex = 1;
             // 
             // lblErreur
             // 
@@ -92,9 +94,8 @@
             this.lblErreur.ForeColor = System.Drawing.Color.Red;
             this.lblErreur.Location = new System.Drawing.Point(9, 451);
             this.lblErreur.Name = "lblErreur";
-            this.lblErreur.Size = new System.Drawing.Size(51, 13);
+            this.lblErreur.Size = new System.Drawing.Size(0, 13);
             this.lblErreur.TabIndex = 7;
-            this.lblErreur.Text = "dfgsdgdg";
             // 
             // frmListCollab
             // 

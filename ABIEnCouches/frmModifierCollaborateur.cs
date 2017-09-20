@@ -32,21 +32,20 @@ namespace ABIEnCouches
             this.txtPrenom.Text = unCollab.PrenomCollab;
             this.rdbM.Checked = unCollab.Civilite == "M" ? true : false;
             this.rdbF.Checked = unCollab.Civilite == "F" ? true : false;
-            this.cmbFamille.SelectedItem = this.cmbFamille.FindString(unCollab.SituationFamiliale);
+            this.cmbFamille.Text = unCollab.SituationFamiliale;
             this.btnFermer.Enabled = true;
         }
 
         internal void modifieCollaborateur()
         {
-
             try
             {
-                Collaborateur newCollab = new Collaborateur(this.rdbM.Checked ? "M" : "F", this.txtNom.Text, this.txtPrenom.Text, this.cmbFamille.SelectedValue.ToString(), true);
+                Collaborateur newCollab = new Collaborateur((this.rdbM.Checked ? "M" : "F"), this.txtNom.Text, this.txtPrenom.Text, this.cmbFamille.Text.ToString(), true);
+                //newCollab.Matricule = oldCollaborateur.Matricule;
             }
             catch (Exception)
             {
-
-                throw;
+                throw new Exception("le Collaborateur n'a pu être modifier, une valeur est inexacte");
             }
 
 

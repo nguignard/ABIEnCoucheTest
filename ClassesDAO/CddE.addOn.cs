@@ -13,7 +13,9 @@ namespace ClassesDAO
         }
 
         public CddE(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, DateTime? dateFinReelle,
-            DateTime dateFin, string motif  )
+            DateTime dateFin, string motif  ): base( idContrat,  dateDebutContrat,  qualification,  statut,  salaireContractuel,   dateFinReelle,
+             dateFin,  motif)
+
         {
         }
 

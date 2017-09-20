@@ -116,14 +116,16 @@
             // 
             // cmbFamille
             // 
+            this.cmbFamille.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFamille.FormattingEnabled = true;
             this.cmbFamille.Items.AddRange(new object[] {
             "CELIBATAIRE",
-            "MARIE",
-            "DIVORCE"});
+            "DIVORCE",
+            "MARIE"});
             this.cmbFamille.Location = new System.Drawing.Point(142, 271);
             this.cmbFamille.Name = "cmbFamille";
             this.cmbFamille.Size = new System.Drawing.Size(200, 21);
+            this.cmbFamille.Sorted = true;
             this.cmbFamille.TabIndex = 3;
             // 
             // txtNom
@@ -178,6 +180,7 @@
             // 
             // btnAjouterPhoto
             // 
+            this.btnAjouterPhoto.Enabled = false;
             this.btnAjouterPhoto.Location = new System.Drawing.Point(22, 344);
             this.btnAjouterPhoto.Name = "btnAjouterPhoto";
             this.btnAjouterPhoto.Size = new System.Drawing.Size(106, 23);
@@ -355,14 +358,14 @@
             this.txtMission.Location = new System.Drawing.Point(114, 46);
             this.txtMission.Name = "txtMission";
             this.txtMission.Size = new System.Drawing.Size(179, 20);
-            this.txtMission.TabIndex = 11;
+            this.txtMission.TabIndex = 9;
             // 
             // txtEcole
             // 
             this.txtEcole.Location = new System.Drawing.Point(114, 23);
             this.txtEcole.Name = "txtEcole";
             this.txtEcole.Size = new System.Drawing.Size(179, 20);
-            this.txtEcole.TabIndex = 10;
+            this.txtEcole.TabIndex = 8;
             // 
             // grpAttributsContrats
             // 
@@ -403,21 +406,21 @@
             this.txtMotif.Location = new System.Drawing.Point(116, 136);
             this.txtMotif.Name = "txtMotif";
             this.txtMotif.Size = new System.Drawing.Size(177, 20);
-            this.txtMotif.TabIndex = 9;
+            this.txtMotif.TabIndex = 7;
             // 
             // txtStatut
             // 
             this.txtStatut.Location = new System.Drawing.Point(116, 110);
             this.txtStatut.Name = "txtStatut";
             this.txtStatut.Size = new System.Drawing.Size(177, 20);
-            this.txtStatut.TabIndex = 8;
+            this.txtStatut.TabIndex = 6;
             // 
             // txtQualif
             // 
             this.txtQualif.Location = new System.Drawing.Point(116, 84);
             this.txtQualif.Name = "txtQualif";
             this.txtQualif.Size = new System.Drawing.Size(177, 20);
-            this.txtQualif.TabIndex = 7;
+            this.txtQualif.TabIndex = 5;
             this.txtQualif.TabStop = false;
             // 
             // txtSalaire
@@ -425,7 +428,7 @@
             this.txtSalaire.Location = new System.Drawing.Point(116, 58);
             this.txtSalaire.Name = "txtSalaire";
             this.txtSalaire.Size = new System.Drawing.Size(177, 20);
-            this.txtSalaire.TabIndex = 6;
+            this.txtSalaire.TabIndex = 4;
             // 
             // frmAjouterCollab
             // 

@@ -8,10 +8,6 @@ namespace ClassesDAO
 {
     public partial class CollaborateursE
     {
-        public CollaborateursE()
-        {
-        }
-
         public CollaborateursE(int matriculeE, string civiliteE, string nomE, string prenomE, string situationE, string photoE, bool actifE)
         {
             this.matriculeE = matriculeE;

@@ -24,6 +24,8 @@ namespace ABIEnCouches
         {
             this.frmModifierCollab.modifieCollaborateur();
 
+            this.frmModifierCollab.Close();
+
 
 
 

@@ -27,6 +27,7 @@ namespace ABIEnCouches
             this.leForm.afficheCollaborateurs(this.listeCollaborateurs);
 
             this.leForm.grdCollaborateurs.CellContentClick  += new DataGridViewCellEventHandler(this.grdCollaborateurs_DoubleClick);
+            //this.leForm.btnAjouter. += new EventHandler(this.btnAjouter_Click);
             this.leForm.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
 
             this.leForm.MdiParent = frmMDI.Ref;
@@ -61,7 +62,6 @@ namespace ABIEnCouches
                 {
                     this.leForm.LeveErreur(ex);
                 }
-                
                 
                 this.leForm.afficheCollaborateurs(this.listeCollaborateurs);
             }
