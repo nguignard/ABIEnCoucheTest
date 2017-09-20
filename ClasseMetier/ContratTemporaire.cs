@@ -9,14 +9,16 @@ using System;
 
 namespace ABIEnCouches
 {
-
+    /// <summary>
+    /// ContratTemporaire : Classe abstraite intermediaire de tout les contrats temporaire
+    /// </summary>
     public abstract class ContratTemporaire : ContratType
     {
         protected DateTime dateFinContrat;
         protected String motif;
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur ContratTemporaire
         /// </summary>
         /// <param name="idContrat"></param>
         /// <param name="dateDebutContrat"></param>

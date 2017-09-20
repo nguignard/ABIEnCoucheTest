@@ -134,6 +134,8 @@ namespace ABIEnCouches
             return b;
         }
 
+
+        //NON GERE
         private void modifierCollaborateur(Collaborateur newCollaborateur)
         {
 

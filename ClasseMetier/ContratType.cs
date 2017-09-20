@@ -11,7 +11,7 @@ namespace ABIEnCouches
 {
 
     /// <summary>
-    /// Classe ContratType Abstraite
+    /// Classe ContratType Abstraite, de tout les contrats
     /// </summary>
     public abstract class ContratType
     {
@@ -24,9 +24,18 @@ namespace ABIEnCouches
         protected Decimal salaireContractuel;
         protected DateTime? finReelContrat;
 
-        protected System.Collections.Generic.SortedDictionary<int,Avenant> avenants;
+        protected System.Collections.Generic.SortedDictionary<int,Avenant> avenants; //liste d'avenants dans un contrat
+
 
         //CONSTRUCTEUR -------------------------------------------------------
+        /// <summary>
+        /// Constructeur de ContratType 
+        /// </summary>
+        /// <param name="idContrat"></param>
+        /// <param name="dateDebutContrat"></param>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="salaireContractuel"></param>
         public ContratType(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
         {
             this.IdContrat = GetNewIdContrat();
@@ -125,7 +134,8 @@ namespace ABIEnCouches
         }
 
         /// <summary>
-        /// FinReelContrat
+        /// FinReelContrat: contrairement a une fin de contrat temporaire. 
+        /// nullable, sera actif avec une fonction clôturer
         /// </summary>
         public DateTime? FinReelContrat
         {
@@ -141,7 +151,7 @@ namespace ABIEnCouches
         }
 
         /// <summary>
-        /// GetIdContrat() nouvelId
+        /// GetIdContrat() nouvelId d'un contrat type
         /// </summary>
         /// <returns></returns>
         public int GetNewIdContrat()
@@ -153,7 +163,7 @@ namespace ABIEnCouches
 
 
 
-        //GESTION DES AVENANTS----------------------------------------------
+        //GESTION DES AVENANTS // NON GERE----------------------------------------------
      
         /// <pdGenerated>default getter</pdGenerated>
         public System.Collections.Generic.SortedDictionary<int, Avenant> ListerAvenants()
@@ -213,7 +223,7 @@ namespace ABIEnCouches
         //FONCTIONS-------------------------------------------------------------------------
 
         /// <summary>
-        /// cloturerContrat
+        /// cloturerContrat // NON GERE
         /// </summary>
         public DateTime? CloturerContrat
         {
@@ -243,6 +253,11 @@ namespace ABIEnCouches
             return "idContrat "+ idContrat+ " qualification " + " statut "+ statut ;
         }
 
+
+        /// <summary>
+        /// Fonction d'affichage du type de contrat 
+        /// </summary>
+        /// <returns>CDD, CDI, Stage...</returns>
         public string TypeContrat()
         {
             string s = this.GetType().ToString();
