@@ -31,7 +31,7 @@ namespace ABIEnCouches
             this.rdbF.Checked = unCollab.Civilite == "F" ? true : false;
             this.cmbFamille.Text = unCollab.SituationFamiliale;
 
-            this.grdContrats.DataSource = unCollab.GetContrats();
+            this.grdContrats.DataSource = unCollab.ListerContrats();
             this.grdContrats.Refresh();
             this.btnFermer.Enabled = true;
         }

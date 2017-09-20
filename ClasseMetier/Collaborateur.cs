@@ -204,43 +204,37 @@ namespace ABIEnCouches
 
         //FONCTIONS---------------------------------------------------------------------------
 
-        //public ContratType ContratInitial()
-        //{
-        //    DateTime t = DateTime.MaxValue;
-        //    ContratType x;
+        public ContratType ContratInitial()
+        {
 
-        //    Rechercher Date contrat initial
-        //    foreach (DateTime c in dtContrats.Rows.Find(1))
-        //    {
-        //        if (t < c.DateDebutContrat)
-        //        {
-        //            t = c.DateDebutContrat;
-        //        }
-        //    }
-        //    if (t != null)
-        //    {
+            DateTime t = DateTime.MaxValue;
+            ContratType x =null;
 
-        //        return t;
-        //    }
-        //    else
-        //    {
-        //        throw new Exception("pas de contat initial");
-        //    }
-
-
-        //    //Retourner contrat Initial
-        //    foreach (ContratType c in contrats.Values)
-        //    {
-        //        if (c.DateDebutContrat == t)
-        //        {
-        //            x = RestituerContrat(c.IdContrat);
-        //        }
-        //    }
-
-        //    return x;
-
-
-        //}
+            //Rechercher Date contrat initial
+            foreach (ContratType c in contrats.Values)
+            {
+                if (t > c.DateDebutContrat)
+                {
+                    t = c.DateDebutContrat;
+                }
+            }
+            if (t != null)
+            {
+                //Retourner contrat Initial
+                foreach (ContratType c in contrats.Values)
+                {
+                    if (c.DateDebutContrat == t)
+                    {
+                        x = RestituerContrat(c.IdContrat);
+                    }
+                }
+                return x;
+            }
+            else
+            {
+                throw new Exception ("il n'y a pas de contrat initial!!");
+            }
+        }
 
 
 
@@ -339,21 +333,7 @@ namespace ABIEnCouches
 
 
         //GESTION COLLECTION DE CONTRATS--------------------------------------------------------------------------------
-        /// <pdGenerated>default getter</pdGenerated>
-        public DataTable GetContrats()
-        {
-            dtContrats.Clear();
-            DataRow dr;
-            foreach (ContratType contrat in contrats.Values)
-            {
-                dr = dtContrats.NewRow();
-                dr[0] = contrat.IdContrat;
-                dr[1] = contrat.TypeContrat();
-                dr[2] = contrat.DateDebutContrat.Date.ToString();
-                dtContrats.Rows.Add(dr);
-            }
-            return this.dtContrats;
-        }
+    
 
         ///// <pdGenerated>default setter</pdGenerated>
         //public void SetContrat(ContratType newContrat)

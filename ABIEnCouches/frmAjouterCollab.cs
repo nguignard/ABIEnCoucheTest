@@ -55,7 +55,7 @@ namespace ABIEnCouches
                                                         this.cmbFamille.SelectedItem.ToString(),
                                                         true);
 
-               this.instancieContrat();
+                this.instancieContrat();
                 this.newCollaborateur.AddContrat(newContrat);
                 
 

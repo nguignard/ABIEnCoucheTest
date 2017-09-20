@@ -46,12 +46,12 @@ namespace ABIEnCouches
 
                     try
                     {
-                        Dao.AddCollaborateur(ctrl.LeCollaborateur);
+                        Dao.AddNewCollaborateur(ctrl.LeCollaborateur);
+
                     }
                     catch (Exception ex)
                     {
                         this.leForm.LeveErreur(ex);
-
                         this.listeCollaborateurs.removeCollaborateur(ctrl.LeCollaborateur.Matricule, typeof(ctrlListerCollaborateur).ToString());
                         //Dao.RemoveCollaborateur(ctrl.LeCollaborateur.Matricule, typeof(ctrlListerCollaborateur).ToString());
 
@@ -96,12 +96,12 @@ namespace ABIEnCouches
             //Cdi contrat2 = new Cdi(new DateTime(2010, 5, 5).Date, "Chef de Projet", "Cadre", 5000);
             //collaborateur.AddContrat(contrat2);
 
-            //listeCollaborateurs.AddCollaborateur(collaborateur);
+            //listeCollaborateurs.AddNewCollaborateur(collaborateur);
             //collaborateur = new Collaborateur("F", "DUPONt", "Rogee", "CELIBATAIRE", true);
             //contrat2 = new Cdi(new DateTime(2012, 6, 6).Date, "CDI", "employee", 1500);
 
             //collaborateur.AddContrat(contrat);
-            //listeCollaborateurs.AddCollaborateur(collaborateur);
+            //listeCollaborateurs.AddNewCollaborateur(collaborateur);
         }
 
 

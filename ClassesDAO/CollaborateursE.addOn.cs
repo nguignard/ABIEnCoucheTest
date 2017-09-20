@@ -8,10 +8,9 @@ namespace ClassesDAO
 {
     public partial class CollaborateursE
     {
-        //public CollaborateursE()
-        //{
-
-        //}
+        public CollaborateursE()
+        {
+        }
 
         public CollaborateursE(int matriculeE, string civiliteE, string nomE, string prenomE, string situationE, string photoE, bool actifE)
         {
@@ -22,6 +21,8 @@ namespace ClassesDAO
             this.situationE = situationE;
             this.photoE = photoE;
             this.actifE = actifE;
+
+            this.ContratTypeE = new HashSet<ContratTypeE>();
         }
     }
 }

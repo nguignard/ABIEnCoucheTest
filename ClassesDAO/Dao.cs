@@ -68,8 +68,6 @@ namespace ClassesDAO
                 {
                     LeContratType = new Stagiaire(item.idContratE, ((StageE)item).ecoleE.Trim(), ((StageE)item).missionE.Trim(), ((StageE)item).motifE.Trim(), item.dateDebutE, ((StageE)item).dateFinE , item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE);
                 }
-
-                Console.WriteLine(item.ToString());
                 leCollaborateur.AddContrat(LeContratType);
 
             }
@@ -84,41 +82,61 @@ namespace ClassesDAO
 
 
 
-        public static void AddCollaborateur(Collaborateur leCollaborateur)
+        public static void AddNewCollaborateur(Collaborateur leCollaborateur)
         {
             if(DonneesDao.DbContextEntreprise == null)
             {
                 DonneesDao.DbContextEntreprise = new EntrepriseContainer();
             }
-            CollaborateursE c = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
+            ContratType ct = leCollaborateur.ContratInitial();
+            CollaborateursE collaborateurE = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
+            ContratTypeE contratE = toContratE(ct);
+            contratE.CollaborateurEntity = collaborateurE;
 
-            //ContratTypeE c;
-
-
-
-            //if(leCollaborateur.ListerContrats)
-
-
+            collaborateurE.ContratTypeE.Add(contratE);
 
 
             try
             {
-                DonneesDao.DbContextEntreprise.CollaborateursESet.Add(c);
-                    //DonneesDao.DbContextEntreprise.ContratTypeESet
-
+                DonneesDao.DbContextEntreprise.CollaborateursESet.Add(collaborateurE);
                 DonneesDao.DbContextEntreprise.SaveChanges();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
-            }
+                //DonneesDao.DbContextEntreprise.CollaborateursESet.Remove(collaborateurE);
+                //DonneesDao.DbContextEntreprise.SaveChanges();
 
-            
+                throw new Exception("le nouveau collaborateur n'a pu etre mis en DB");
+            }
 
 
         }
 
 
+
+        public static ContratTypeE toContratE(ContratType unContrat)
+        {
+            ContratTypeE contratE = null;
+
+            if(unContrat is Cdi)
+            {
+                contratE = new CdiE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat);
+                            }
+            else if(unContrat is Cdd)
+            {
+                contratE = new CddE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat,
+                    ((Cdd)unContrat).DateFinContrat, ((Cdd)unContrat).Motif);
+            }
+            else if(unContrat is Stagiaire)
+            {
+                contratE = new StageE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat,
+                   ((Stagiaire)unContrat).DateFinContrat, ((Stagiaire)unContrat).Motif,
+                   ((Stagiaire)unContrat).Ecole, ((Stagiaire)unContrat).Mission
+                   );
+            }
+            return contratE;
+            
+        }
 
 
 

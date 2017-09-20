@@ -41,9 +41,13 @@
             // 
             this.grdCollaborateurs.AllowUserToAddRows = false;
             this.grdCollaborateurs.AllowUserToDeleteRows = false;
+            this.grdCollaborateurs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.grdCollaborateurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdCollaborateurs.Location = new System.Drawing.Point(12, 98);
+            this.grdCollaborateurs.MultiSelect = false;
             this.grdCollaborateurs.Name = "grdCollaborateurs";
+            this.grdCollaborateurs.ReadOnly = true;
+            this.grdCollaborateurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdCollaborateurs.Size = new System.Drawing.Size(806, 311);
             this.grdCollaborateurs.TabIndex = 0;
             // 
