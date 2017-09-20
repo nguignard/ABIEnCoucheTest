@@ -7,13 +7,17 @@ using System.Data;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// Classe Metier Collaborateurs , gère la collection des collaborateurs
+    /// </summary>
     public class Collaborateurs
     {
         private  SortedDictionary<int, Collaborateur> listCollab;
         private  DataTable dtCollab ;
 
         /// <summary>
-        /// Constructeurs Collaborateurs
+        /// Constructeurs Collaborateurs, instancie la liste de collaborateurs (privee) et la dataTable de visualisation (public) mais non complete
         /// </summary>
         public Collaborateurs()
         {
@@ -27,7 +31,7 @@ namespace ABIEnCouches
 
         //FONCTIONS-----------------------------------------------------------
         /// <summary>
-        /// GetCollaborateurs()
+        /// ListerCollaborateurs(), rnvoie la liste des collaborateurs pour visualisation
         /// </summary>
         /// <returns></returns>
         public DataTable ListerCollaborateurs()
@@ -46,7 +50,7 @@ namespace ABIEnCouches
         }
 
         /// <summary>
-        /// AddCollaborateur
+        /// AddCollaborateur, rajoute un collaborateur au dictionnaire des collaborateur
         /// </summary>
         /// <param name="newCollab"></param>
         public void AddCollaborateur(Collaborateur newCollab)
@@ -63,11 +67,15 @@ namespace ABIEnCouches
         }
 
 
-
+        /// <summary>
+        /// removeCollaborateur, ne sert que en cas d'echec (try/catch) pour rentrer un collaborateur dans la liste
+        /// </summary>
+        /// <param name="matricule"></param>
+        /// <param name="leDemandeur"></param>
         public void removeCollaborateur(int matricule, string leDemandeur)
         {
-            if(leDemandeur == "ABIEnCouches.ctrlListerCollaborateur" )
-            if (listCollab.ContainsKey(matricule))
+            if(leDemandeur == "ABIEnCouches.ctrlListerCollaborateur") // protection: ne peut etre appele que par le controleur ABIEnCouches.ctrlListerCollaborateur
+                if (listCollab.ContainsKey(matricule))
             {
                 this.listCollab.Remove(matricule);
             }
@@ -92,7 +100,7 @@ namespace ABIEnCouches
         }
 
         /// <summary>
-        /// controlAddContrats controle la validite du collaborateur ajouté
+        /// controlAddContrats controle la validite du collaborateur ajouté dans sa liste
         /// </summary>
         /// <param name="newContrat"></param>
         /// <returns></returns>

@@ -108,8 +108,6 @@ namespace ClassesDAO
 
                 throw new Exception("le nouveau collaborateur n'a pu etre mis en DB");
             }
-
-
         }
 
 

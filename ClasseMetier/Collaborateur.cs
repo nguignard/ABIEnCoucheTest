@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace ABIEnCouches
 {
     /// <summary>
-    /// Classe Collaborateur, gere les collections de collabotrateurs, les collaborateurs et leurs contrats
+    /// Classe Metier Collaborateur, gere la liste des contrats et des avenants d'un collaborateur
     /// </summary>
     public class Collaborateur
     {
@@ -23,14 +23,14 @@ namespace ABIEnCouches
         private string photo;
         private bool actif;
 
-        private SortedDictionary<int, ContratType> contrats;
-        private DataTable dtContrats;
+        private SortedDictionary<int, ContratType> contrats; // Liste dictionnaire des collaborateurs elle est privéee et innaccessible
+        private DataTable dtContrats; // pour affichage de la liste des contrats
         private SortedDictionary<DateTime, HistoriqueAugmentation> augmentations;
 
         //CONSTRUCTEURS-------------------------------------------------------------------------------
-        
+
         /// <summary>
-        /// Constructeur Complet
+        /// Collaborateur: Constructeur Complet
         /// </summary>
         /// <param name="matricule"></param>
         /// <param name="civilite"></param>
@@ -48,11 +48,10 @@ namespace ABIEnCouches
             this.Actif = actif;
 
             this.contrats = new SortedDictionary<int, ContratType>();
-            this.dtContrats = new DataTable();
+            this.dtContrats = new DataTable();                      // Instancie la liste des contrats pour visualisation, ainsi que ces colonnes a afficher
             dtContrats.Columns.Add("IDCONTRAT", typeof(int));
             dtContrats.Columns.Add("TYPECONTRAT", typeof(String));
             dtContrats.Columns.Add("DATEDEBUT", typeof(String));
-
         }
 
 
@@ -203,10 +202,12 @@ namespace ABIEnCouches
 
 
         //FONCTIONS---------------------------------------------------------------------------
-
+        /// <summary>
+        /// ContratInitial , permet de retrouver le contrat initial pour affichage, pour des raisons de privacy
+        /// </summary>
+        /// <returns></returns>
         public ContratType ContratInitial()
         {
-
             DateTime t = DateTime.MaxValue;
             ContratType x =null;
 
@@ -236,23 +237,14 @@ namespace ABIEnCouches
             }
         }
 
+        /// <summary>
+        /// GetNewMatricule, reccupere le nouveau matricule pour un collaborateur. généré en C# et nonj par la base
+        /// </summary>
+        /// <returns></returns>
         public int GetNewMatricule()
         {
            return Donnees.CompteurCollaborateur++;
         }
-
-        //public Object Equals(bool collaborateur)
-        //{
-        //    // TODO: implement
-        //    return null;
-        //}
-
-        //public override Int32 GetHashCode()
-        //{
-        //    // TODO: implement
-        //    return null;
-        //}
-
 
         /// <summary>
         /// onGoingCDI permet de savoir si unCDI est en cours
@@ -283,7 +275,7 @@ namespace ABIEnCouches
         }
 
 
-        //GESTION COLLECTION D'AUGMENTATIONS--------------------------------------------------------------------------------------
+        //GESTION COLLECTION D'AUGMENTATIONS- NON GERE-------------------------------------------------------------------------------------
 
         /// <pdGenerated>default getter</pdGenerated>
         public System.Collections.Generic.SortedDictionary<DateTime, HistoriqueAugmentation> GetAugmentations()
@@ -315,6 +307,7 @@ namespace ABIEnCouches
             }
         }
 
+       //NonGéré
         public HistoriqueAugmentation RestituerAugmentation(DateTime date)
         {
             if (!augmentations.ContainsKey(date))
@@ -329,15 +322,6 @@ namespace ABIEnCouches
 
 
         //GESTION COLLECTION DE CONTRATS--------------------------------------------------------------------------------
-    
-
-        ///// <pdGenerated>default setter</pdGenerated>
-        //public void SetContrat(ContratType newContrat)
-        //{
-        //    //RemoveAllContratType();
-        //    foreach (ContratType oContrat in contrats.Values)
-        //        AddContrat(oContrat);
-        //}
 
         /// <pdGenerated>default Add</pdGenerated>
         public void AddContrat(ContratType newContrat)
@@ -412,6 +396,10 @@ namespace ABIEnCouches
             return b;
         }
 
+        /// <summary>
+        /// ListerContrats renvoie la liste des contrats du collaborateur. cette liste est public contrairement au dictionnary
+        /// </summary>
+        /// <returns></returns>
         public DataTable ListerContrats()
         {
             dtContrats.Clear();

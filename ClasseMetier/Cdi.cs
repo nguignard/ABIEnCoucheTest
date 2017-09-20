@@ -9,6 +9,10 @@ using System;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// Classe Metier Cdi
+    /// </summary>
     public class Cdi : ContratType
     {
 
@@ -18,6 +22,11 @@ namespace ABIEnCouches
 
         }
 
+
+        /// <summary>
+        /// ToString()
+        /// </summary>
+        /// <returns></returns>
         public override String ToString()
         {
             return "CDI : idContrat " + idContrat + " dateDebutContrat " + dateDebutContrat + " salaireContractuel " + salaireContractuel;
