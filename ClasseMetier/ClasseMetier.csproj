@@ -49,7 +49,6 @@
     <Compile Include="ContratType.cs" />
     <Compile Include="Donnees.cs" />
     <Compile Include="HistoriqueAugmentation.cs" />
-    <Compile Include="OutilsMetiers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stagiaire.cs" />
   </ItemGroup>

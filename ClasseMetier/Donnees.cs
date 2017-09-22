@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// Classe compteur donnant les clefs primaires des collaborateur, contrats, avenants
+    /// </summary>
     public static class Donnees
     {
         public static int CompteurCollaborateur = 1;

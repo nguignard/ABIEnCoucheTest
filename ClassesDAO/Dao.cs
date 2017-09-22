@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace ClassesDAO
 {
+
+    /// <summary>
+    /// Classe DAO de fonctions statics permettant d'acceder aux entitées 
+    /// </summary>
     public class Dao
     {
 
@@ -81,7 +85,10 @@ namespace ClassesDAO
 
 
 
-
+        /// <summary>
+        /// Ajoute un Collaborateur avec sa liste de contrats à la liste des collaborateurs Entity FrameWork
+        /// </summary>
+        /// <param name="leCollaborateur"></param>
         public static void AddNewCollaborateur(Collaborateur leCollaborateur)
         {
             if(DonneesDao.DbContextEntreprise == null)
@@ -91,11 +98,9 @@ namespace ClassesDAO
             ContratType ct = leCollaborateur.ContratInitial();
             CollaborateursE collaborateurE = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
             ContratTypeE contratE = toContratE(ct);
-            contratE.CollaborateurEntity = collaborateurE;
+            contratE.CollaborateurEntity = collaborateurE; //Ajoute le contrat initial au collaborateur
 
             collaborateurE.ContratTypeE.Add(contratE);
-
-
             try
             {
                 DonneesDao.DbContextEntreprise.CollaborateursESet.Add(collaborateurE);
@@ -111,7 +116,11 @@ namespace ClassesDAO
         }
 
 
-
+        /// <summary>
+        /// toContratE transforme un contrat Metier en contrat entityFrameWork
+        /// </summary>
+        /// <param name="unContrat"></param>
+        /// <returns></returns>
         public static ContratTypeE toContratE(ContratType unContrat)
         {
             ContratTypeE contratE = null;
@@ -133,7 +142,6 @@ namespace ClassesDAO
                    );
             }
             return contratE;
-            
         }
 
 

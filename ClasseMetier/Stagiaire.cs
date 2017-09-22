@@ -9,11 +9,28 @@ using System;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// Classe Stagiaire, heritee de ContratTemporaire
+    /// </summary>
     public class Stagiaire : ContratTemporaire
     {
         private String ecole;
         private String mission;
 
+
+        /// <summary>
+        /// Constructeur de Stagiaire
+        /// </summary>
+        /// <param name="idContrat"></param>
+        /// <param name="ecole"></param>
+        /// <param name="mission"></param>
+        /// <param name="motif"></param>
+        /// <param name="dateDebutContrat"></param>
+        /// <param name="datFinContrat"></param>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="salaireContractuel"></param>
         public Stagiaire(int idContrat, String ecole, String mission, 
             String motif, DateTime dateDebutContrat, DateTime datFinContrat, String qualification, String statut,  Decimal salaireContractuel) : 
             base( idContrat,  dateDebutContrat,  qualification,  statut,  salaireContractuel,  datFinContrat,  motif)
@@ -22,13 +39,19 @@ namespace ABIEnCouches
             this.Mission = Mission;
         }
 
+        /// <summary>
+        /// to string
+        /// </summary>
+        /// <returns></returns>
         public override String ToString()
         {
            
             return "Stage : Ecole " + Ecole+ " Mission " + Mission;
         }
 
-
+        /// <summary>
+        /// GETSET Ecole
+        /// </summary>
         public String Ecole
         {
             get
@@ -42,6 +65,9 @@ namespace ABIEnCouches
             }
         }
 
+        /// <summary>
+        /// GETSET Mission
+        /// </summary>
         public String Mission
         {
             get

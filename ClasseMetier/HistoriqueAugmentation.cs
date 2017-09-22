@@ -10,6 +10,10 @@ using System;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// Classe NON IMPLEMENTEE
+    /// </summary>
     public class HistoriqueAugmentation
     {
 
