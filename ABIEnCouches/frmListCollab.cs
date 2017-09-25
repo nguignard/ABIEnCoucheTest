@@ -41,7 +41,7 @@ namespace ABIEnCouches
 
         internal void LeveErreur(Exception ex)
         {
-            this.lblErreur.Text = "Erreur = " + ex.Message;
+            this.lblErreur.Text =  ex.Message;
         }
     }
 }

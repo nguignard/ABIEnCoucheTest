@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+    /// <summary>
+    /// Classe Collaborateur : controleur du form permettant d'ajouter un collaborateur
+    /// </summary>
     class ctrlAjouterCollaborateur
     {
         private frmAjouterCollab leForm;
@@ -15,6 +18,10 @@ namespace ABIEnCouches
         private ContratType leContrat;
         private DialogResult result;
 
+
+        /// <summary>
+        /// constructeur vide,evenement ajouter une photo, valide le form d'un nouveau collaborateur
+        /// </summary>
         public ctrlAjouterCollaborateur()
         {
             leForm = new frmAjouterCollab();
@@ -41,8 +48,14 @@ namespace ABIEnCouches
                 return result;
             }
         }
-        
+
         //FONCTIONS-------------------------------------------------------------
+
+        /// <summary>
+        /// btnValider_Click affiche une boite de controle validant l'ajout d'un nouveau collaborateur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValider_Click(object sender, EventArgs e)
         {
             if (this.leForm.Controle())
@@ -52,9 +65,8 @@ namespace ABIEnCouches
                     this.leForm.DialogResult = DialogResult.OK;
                     this.result = DialogResult.OK;
                     this.leCollaborateur = this.leForm.NewCollaborateur;
+
                     leForm.Close();
-
-
 
                 }
                 else
@@ -64,7 +76,11 @@ namespace ABIEnCouches
             }
         }
 
-
+        /// <summary>
+        /// btnAjouterPhoto_Click ajoute une photo, non géré
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAjouterPhoto_Click(object sender, EventArgs e)
         {
             //TODO

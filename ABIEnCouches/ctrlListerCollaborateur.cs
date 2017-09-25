@@ -8,19 +8,23 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// ctrlListerCollaborateur classe controlant l'instanciation et la visualisation de la liste de collaborateur, l'affichage d'un collaborateur
+    /// </summary>
     public class ctrlListerCollaborateur
     {
         Collaborateurs listeCollaborateurs = new Collaborateurs();
         //private Collaborateurs listeCollaborateurs;
         private frmListCollab leForm;
 
-
+        /// <summary>
+        /// ctrlListerCollaborateur : constructeur, instancie a partir de la base de donnee la liste des collaborateurs et affiche cette liste sous forme de datagrid
+        /// evenement double click permet de visualiser un collaborateur
+        /// </summary>
         public ctrlListerCollaborateur()
         {
-            
             Dao.instancieCollaborateurs(listeCollaborateurs);
-            
-
 
             //this.instancieCollaborateurs();
             this.leForm = new frmListCollab(this.listeCollaborateurs);
@@ -34,7 +38,11 @@ namespace ABIEnCouches
             this.leForm.Show();
         }
 
-
+        /// <summary>
+        /// evenement btnAjouter_Click: tente d'ajouter un collaborateur à la liste des collaborateurs metier puis Dao.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             ctrlAjouterCollaborateur ctrl = new ctrlAjouterCollaborateur();
@@ -64,9 +72,17 @@ namespace ABIEnCouches
                 }
                 
                 this.leForm.afficheCollaborateurs(this.listeCollaborateurs);
+                Exception valid = new Exception("Collaborateur Ajouté!!!");
+                
+                this.leForm.LeveErreur(valid);
             }
         }
 
+        /// <summary>
+        /// grdCollaborateurs_DoubleClick: reccupere l'ID d'un collaborateur dans la liste des collaborateurs et lance le form de visualisation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void grdCollaborateurs_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Collaborateur leCollaborateur;
@@ -81,7 +97,7 @@ namespace ABIEnCouches
 
 
         /// <summary>
-        /// initialiseListeCollab()
+        /// initialiseListeCollab() : en dur
         /// </summary>
         private void instancieCollaborateurs()
         {

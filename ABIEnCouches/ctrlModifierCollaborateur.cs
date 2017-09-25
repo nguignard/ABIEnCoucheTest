@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// classe ctrlModifierCollaborateur: controle le form qui affiche un collaborateur pour modification 
+    /// </summary>
     class ctrlModifierCollaborateur
     {
         Collaborateur leCollaborateur;
         frmModifierCollaborateur frmModifierCollab;
 
+
+        /// <summary>
+        /// Constructeur ctrlModifierCollaborateur controle le form qui affiche un collaborateur pour modification
+        /// </summary>
+        /// <param name="unCollaborateur"></param>
         public ctrlModifierCollaborateur(Collaborateur unCollaborateur)
         {
             this.leCollaborateur = unCollaborateur;
@@ -19,9 +28,15 @@ namespace ABIEnCouches
             frmModifierCollab.Show();
         }
 
-
+        /// <summary>
+        /// btnValider_Click controle la validation du collaborateur modifie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValider_Click(object sender, EventArgs e)
         {
+
+
             this.frmModifierCollab.modifieCollaborateur();
 
             this.frmModifierCollab.Close();

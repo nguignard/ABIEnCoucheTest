@@ -26,6 +26,13 @@ namespace ABIEnCouches
 
         }
 
+        public frmVisuContrat frmVisuContrat
+        {
+            get => default(frmVisuContrat);
+            set
+            {
+            }
+        }
 
         private void btnCloturer_Click(object sender, EventArgs e)
         {

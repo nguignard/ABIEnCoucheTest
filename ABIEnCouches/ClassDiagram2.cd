@@ -50,17 +50,10 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ABIEnCouches.frmMDI" Collapsed="true">
-    <Position X="0.5" Y="4.25" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BJCgCv0AhCEAAgEICiC2wIdyjABBAcgBCmwARzAAQEc=</HashCode>
       <FileName>frmMDI.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ABIEnCouches.frmModifierCollaborateur" Collapsed="true">
-    <Position X="7.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gIBAgFCAASgBQAAAAACB0ACCAAQAAAQAAAAAAkAAAIA=</HashCode>
-      <FileName>frmModifierCollaborateur.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ABIEnCouches.frmVisuCollaborateur" Collapsed="true">
@@ -83,6 +76,74 @@
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Outils.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="ABIEnCouches.Cdd" Collapsed="true">
+    <Position X="5.5" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.Cdi" Collapsed="true">
+    <Position X="10" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.Collaborateur" Collapsed="true">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.Collaborateurs" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.ContratTemporaire" Collapsed="true">
+    <Position X="6.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.ContratType" Collapsed="true">
+    <Position X="7.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.Donnees" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ABIEnCouches.Stagiaire" Collapsed="true">
+    <Position X="7.75" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.CddE" Collapsed="true">
+    <Position X="12.5" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.CdiE" Collapsed="true">
+    <Position X="16.75" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.CollaborateursE" Collapsed="true">
+    <Position X="14.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.ContratTemporaireE" Collapsed="true">
+    <Position X="13.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.ContratTypeE" Collapsed="true">
+    <Position X="14.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.Dao" Collapsed="true">
+    <Position X="14.75" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.DonneesDao" Collapsed="true">
+    <Position X="14.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.EntrepriseContainer" Collapsed="true">
+    <Position X="14.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ClassesDAO.StageE" Collapsed="true">
+    <Position X="14.75" Y="10" Width="1.5" />
+    <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
