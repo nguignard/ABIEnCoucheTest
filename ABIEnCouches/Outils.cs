@@ -7,8 +7,17 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// CLASSE DE FONCTIONS OUTILS UTILISEE PAR PLUSIEURS CLASSES DE VISUALISATION
+    /// </summary>
     public static class Outils
     {
+
+        /// <summary>
+        /// WhiteContrat Methode remettant les champs d'un collaborateur a blanc
+        /// </summary>
+        /// <param name="leForm"></param>
         public static void WhiteContrat(frmAjouterCollab leForm)
         {
                 leForm.txtEcole.Text = "";

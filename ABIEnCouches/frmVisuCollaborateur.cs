@@ -10,10 +10,18 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+    /// <summary>
+    /// class frmVisuCollaborateur permet de visualiser un collabotrateur
+    /// </summary>
     public partial class frmVisuCollaborateur : Form
     {
         Collaborateur leCollaborateur;
 
+
+        /// <summary>
+        /// constructeur frmVisuCollaborateur
+        /// </summary>
+        /// <param name="unCollab"></param>
         public frmVisuCollaborateur(Collaborateur unCollab)
         {
             this.leCollaborateur = unCollab;

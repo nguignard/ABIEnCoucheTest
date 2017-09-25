@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// classe frmMDI
+    /// </summary>
     public partial class frmMDI : Form
     {
         static public frmMDI Ref; //Reference du MDI en statique accessible à tous
@@ -27,6 +31,12 @@ namespace ABIEnCouches
 
 
         //MENU frmMDI----------------------------------------------------
+
+            /// <summary>
+            /// menu lancant la liste des collaborateurs
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
         private void collaborateursToolStripMenuItem_Click(object sender, EventArgs e)
         {
               ctrlListerCollaborateur ctrl = new ctrlListerCollaborateur();
@@ -35,7 +45,11 @@ namespace ABIEnCouches
 
 
 
-
+        /// <summary>
+        ///  menu lancant la liste des collaborateurs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenFile(object sender, EventArgs e)
         {
               ctrlListerCollaborateur ctrl = new ctrlListerCollaborateur();
@@ -115,6 +129,11 @@ namespace ABIEnCouches
             }
         }
 
+        /// <summary>
+        ///  menu lancant la liste des collaborateurs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripButton_Click(object sender, EventArgs e)
         {
             ctrlListerCollaborateur ctrl = new ctrlListerCollaborateur();

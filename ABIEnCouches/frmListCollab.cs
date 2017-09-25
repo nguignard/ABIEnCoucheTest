@@ -10,18 +10,30 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
-    
 
+    /// <summary>
+    /// classe frmListCollab : affiche la liste des collaborateurs
+    /// </summary>
     public partial class frmListCollab : Form
     {
         private Collaborateurs listeCollaborateurs;
 
+
+        /// <summary>
+        /// constructeur frmListCollab 
+        /// </summary>
+        /// <param name="uneliste"></param>
         public frmListCollab(Collaborateurs uneliste)
         {
             InitializeComponent();
             this.listeCollaborateurs = uneliste;
         }
 
+
+        /// <summary>
+        /// affiche le data grid de la liste de collaborateurs
+        /// </summaafficheCollaborateursry>
+        /// <param name="listeCollaborateurs"></param>
         internal void afficheCollaborateurs(Collaborateurs listeCollaborateurs)
         {
             this.grdCollaborateurs.DataSource = listeCollaborateurs.ListerCollaborateurs();
@@ -39,6 +51,11 @@ namespace ABIEnCouches
             Application.Exit();
         }
 
+
+        /// <summary>
+        /// LeveErreur affiche un message dans la fenêtre principal ( exceptions...)
+        /// </summary>
+        /// <param name="ex"></param>
         internal void LeveErreur(Exception ex)
         {
             this.lblErreur.Text =  ex.Message;
