@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// classe frmAjouterCollab
+    /// </summary>
     public partial class frmAjouterCollab : Form
     {
         private Collaborateur newCollaborateur;
         private ContratType newContrat;
 
+
+        /// <summary>
+        /// Constructeur frmAjouterCollab affiche un collaborateur champ blanc
+        /// </summary>
         public frmAjouterCollab()
         {
             InitializeComponent();
@@ -35,10 +43,14 @@ namespace ABIEnCouches
                 return this.newCollaborateur;
             }
         }
-        
+
 
 
         //INSTANCIATION DU NOUVEAU COLLABORATEUR--------------------------
+        /// <summary>
+        /// InstancieCollaborateur methode instanciant un collaborateutr et son contrat initial 
+        /// </summary>
+        /// <returns></returns>
         internal bool InstancieCollaborateur()
         {
             try
@@ -122,6 +134,11 @@ namespace ABIEnCouches
                 }
         }
 
+
+        /// <summary>
+        ///  non instancié
+        /// </summary>
+        /// <returns></returns>
         internal Boolean Controle()
         { return true; }
 

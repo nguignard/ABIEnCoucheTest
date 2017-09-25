@@ -7,11 +7,21 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+    /// <summary>
+    /// ctrlVisuModifCollaborateur classe controllant la visualisation d'un controlleur
+    /// </summary>
     class ctrlVisuModifCollaborateur
     {
         private Collaborateur leCollaborateur;
         frmVisuCollaborateur leForm;
 
+
+        /// <summary>
+        /// Constructeur : ctrlVisuModifCollaborateur
+        /// - insstancie la visualisation d'un collaborateutr
+        /// - gere les evenements ajout, modif collaborateur, 
+        /// </summary>
+        /// <param name="leCollaborateur"></param>
         public ctrlVisuModifCollaborateur(Collaborateur leCollaborateur)
         {
             this.leCollaborateur = leCollaborateur;
@@ -50,7 +60,11 @@ namespace ABIEnCouches
 
 
 
-
+        /// <summary>
+        /// evenement Modifier un collab.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void grdContrats_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ContratType leContrat;

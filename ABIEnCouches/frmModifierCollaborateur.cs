@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace ABIEnCouches
 {
+
+    /// <summary>
+    /// classe frmModifierCollaborateur affiche un collaborateur pour modification et instancie le collaborateur modifie
+    /// </summary>
     public partial class frmModifierCollaborateur : Form
     {
 
         Collaborateur oldCollaborateur;
 
+
+        /// <summary>
+        /// Constructeur frmModifierCollaborateur: Affiche le collaborateur a modifier
+        /// </summary>
+        /// <param name="unCollaborateur"></param>
         public frmModifierCollaborateur(Collaborateur unCollaborateur)
         {
             this.oldCollaborateur = unCollaborateur;
@@ -23,7 +32,10 @@ namespace ABIEnCouches
         }
 
 
-
+        /// <summary>
+        /// Fonction affichant le collaborateur à son état avant modification
+        /// </summary>
+        /// <param name="unCollab"></param>
         internal void AfficheCollaborateur(Collaborateur unCollab)
         {
             this.Text = unCollab.ToString();
@@ -36,6 +48,10 @@ namespace ABIEnCouches
             this.btnFermer.Enabled = true;
         }
 
+
+        /// <summary>
+        /// modifieCollaborateur instancie le nouveau collaborateur
+        /// </summary>
         internal void modifieCollaborateur()
         {
             try
@@ -48,13 +64,7 @@ namespace ABIEnCouches
                 throw new Exception("le Collaborateur n'a pu être modifier, une valeur est inexacte");
             }
 
-
-
-
-
-
-
-
+            
             //TODO
         }
 
@@ -85,7 +95,6 @@ namespace ABIEnCouches
             if (dialogResult == DialogResult.Yes)
             {
                 this.AfficheCollaborateur(oldCollaborateur);
-                
             }
         }
 
