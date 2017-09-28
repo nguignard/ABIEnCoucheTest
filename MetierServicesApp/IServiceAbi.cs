@@ -29,6 +29,10 @@ namespace MetierServicesApp
         string AddCollaborateur(Collaborateur newCollaborateur);
 
         [OperationContract]
+        string UpdateCollaborateur(Collaborateur newCollaborateur);
+
+
+        [OperationContract]
         string GetContratsCollaborateur(Collaborateur unCollaborateur);
 
         [OperationContract]
