@@ -1,0 +1,7 @@
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\bin\MetierServicesApp.dll.config
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\bin\MetierServicesApp.dll
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\bin\MetierServicesApp.pdb
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\obj\Debug\MetierServicesApp.csprojResolveAssemblyReference.cache
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\obj\Debug\MetierServicesApp.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\obj\Debug\MetierServicesApp.dll
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\MetierServicesApp\obj\Debug\MetierServicesApp.pdb
