@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using ABIEnCouches;
+using ClassesDAO;
 
 namespace MetierServicesApp
 {
@@ -17,17 +19,28 @@ namespace MetierServicesApp
             return string.Format("You entered: {0}", value);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+
+
+        public IList<Collaborateur> GetCollaborateurs()
         {
-            if (composite == null)
+            Collaborateurs listeCollaborateurs = new Collaborateurs();
+            Dao.instancieCollaborateurs(listeCollaborateurs);
+
+            foreach (Collaborateur item in listeCollaborateurs.ListerCollaborateurs
             {
-                throw new ArgumentNullException("composite");
+
             }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
         }
+
+
+
+        public string AddCollaborateur(Collaborateur newCollaborateur)
+        {
+
+        }
+
+
+
+
     }
 }

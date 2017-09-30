@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -86,6 +87,10 @@
     <ProjectReference Include="..\ClasseMetier\ClasseMetier.csproj">
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassesDAO\ClassesDAO.csproj">
+      <Project>{a2631a31-ee49-4af9-a833-fdf0647a2a5e}</Project>
+      <Name>ClassesDAO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
