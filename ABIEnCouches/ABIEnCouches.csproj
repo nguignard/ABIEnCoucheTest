@@ -99,6 +99,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDI.resx">
       <DependentUpon>frmMDI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVisuCollaborateur.resx">
       <DependentUpon>frmVisuCollaborateur.cs</DependentUpon>
@@ -126,12 +127,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClasseMetier\ClasseMetier.csproj">
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{82123907-7e6b-432d-9bc3-e5bcd3565d92}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

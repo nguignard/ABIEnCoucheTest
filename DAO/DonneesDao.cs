@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ClassesDAO
 {
     /// <summary>
@@ -11,6 +12,6 @@ namespace ClassesDAO
     /// </summary>
     public class DonneesDao
     {
-        public static EntrepriseContainer DbContextEntreprise;
+        public static ServiceABI.ServiceAbiClient client ;
     }
 }

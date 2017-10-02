@@ -17,3 +17,15 @@ C:\Users\DL-CDI\Documents\Visual Studio 2015\Projects\ABIEnCouches\ABIEnCouches\
 C:\Users\Quentin\Source\Repos\ABIEnCoucheTest\ABIEnCouches\bin\Debug\ABIEnCouches.exe.config
 C:\Users\Quentin\Source\Repos\ABIEnCoucheTest\ABIEnCouches\obj\Debug\ABIEnCouches.exe
 C:\Users\Quentin\Source\Repos\ABIEnCoucheTest\ABIEnCouches\obj\Debug\ABIEnCouches.pdb
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.csprojResolveAssemblyReference.cache
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.frmAjouterCollab.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.frmAjouterContrat.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.frmListCollab.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.frmMDI.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.frmVisuCollaborateur.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.frmVisuContrat.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.Properties.Resources.resources
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.csproj.GenerateResource.Cache
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.exe
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ABIEnCouches\obj\Debug\ABIEnCouches.pdb

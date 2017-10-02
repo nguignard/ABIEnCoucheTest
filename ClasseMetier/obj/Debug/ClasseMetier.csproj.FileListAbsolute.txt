@@ -3,3 +3,8 @@ C:\Users\DL-CDI\Documents\Visual Studio 2015\Projects\ABIEnCouches\ClasseMetier\
 C:\Users\DL-CDI\Documents\Visual Studio 2015\Projects\ABIEnCouches\ClasseMetier\obj\Debug\ClasseMetier.dll
 C:\Users\DL-CDI\Documents\Visual Studio 2015\Projects\ABIEnCouches\ClasseMetier\obj\Debug\ClasseMetier.pdb
 C:\Users\DL-CDI\Documents\Visual Studio 2015\Projects\ABIEnCouches\ClasseMetier\obj\Debug\ClasseMetier.csprojResolveAssemblyReference.cache
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ClasseMetier\bin\Debug\ClasseMetier.dll
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ClasseMetier\bin\Debug\ClasseMetier.pdb
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ClasseMetier\obj\Debug\ClasseMetier.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ClasseMetier\obj\Debug\ClasseMetier.dll
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\ClasseMetier\obj\Debug\ClasseMetier.pdb
