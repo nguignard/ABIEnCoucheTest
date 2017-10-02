@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Runtime.Serialization;
 
 namespace ABIEnCouches
 {
@@ -11,6 +12,9 @@ namespace ABIEnCouches
     /// <summary>
     /// Classe Metier Collaborateurs , gère la collection des collaborateurs
     /// </summary>
+    /// 
+    [Serializable]
+    [DataContract]
     public class Collaborateurs
     {
         private  SortedDictionary<int, Collaborateur> listCollab;
