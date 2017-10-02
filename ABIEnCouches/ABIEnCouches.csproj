@@ -141,8 +141,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,10 +159,6 @@
     <ProjectReference Include="..\ClasseMetier\ClasseMetier.csproj">
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassesDAO\ClassesDAO.csproj">
-      <Project>{A2631A31-EE49-4AF9-A833-FDF0647A2A5E}</Project>
-      <Name>ClassesDAO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
