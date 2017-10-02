@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABIEnCouches", "ABIEnCouches.csproj", "{07FED308-07FC-48DC-9D1E-6AF37BB194DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasseMetier", "..\ClasseMetier\ClasseMetier.csproj", "{030C2412-8DE1-417D-B6E0-442FD0C812D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "..\DAO\DAO.csproj", "{82123907-7E6B-432D-9BC3-E5BCD3565D92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{030C2412-8DE1-417D-B6E0-442FD0C812D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{030C2412-8DE1-417D-B6E0-442FD0C812D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{030C2412-8DE1-417D-B6E0-442FD0C812D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82123907-7E6B-432D-9BC3-E5BCD3565D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82123907-7E6B-432D-9BC3-E5BCD3565D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82123907-7E6B-432D-9BC3-E5BCD3565D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82123907-7E6B-432D-9BC3-E5BCD3565D92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27950238-3D9A-4145-A778-83E5FFA946C5}
 	EndGlobalSection
 EndGlobal
