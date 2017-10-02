@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using System.Runtime.Serialization;
 
 
 namespace ABIEnCouches
@@ -13,6 +14,9 @@ namespace ABIEnCouches
     /// <summary>
     /// Classe Stagiaire, heritee de ContratTemporaire
     /// </summary>
+    /// 
+    [DataContract]
+    [Serializable]
     public class Stagiaire : ContratTemporaire
     {
         private String ecole;
@@ -52,6 +56,8 @@ namespace ABIEnCouches
         /// <summary>
         /// GETSET Ecole
         /// </summary>
+        /// 
+        [DataMember]
         public String Ecole
         {
             get
@@ -68,6 +74,9 @@ namespace ABIEnCouches
         /// <summary>
         /// GETSET Mission
         /// </summary>
+        /// [DataMember]
+        /// 
+        [DataMember]
         public String Mission
         {
             get

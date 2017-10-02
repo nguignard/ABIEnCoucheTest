@@ -5,6 +5,8 @@
  ***********************************************************************/
 
 using System;
+using System.Runtime.Serialization;
+
 
 
 namespace ABIEnCouches
@@ -12,10 +14,10 @@ namespace ABIEnCouches
     /// <summary>
     /// Classe Metier ContratTemporaire abstraite
     /// </summary>
+    /// [Serializable]
+    
     public class Cdd : ContratTemporaire
     {
-
-
         /// <summary>
         /// Constructeur d'un CDD
         /// </summary>

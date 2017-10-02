@@ -5,13 +5,18 @@
  ***********************************************************************/
 
 using System;
-
+using System.Runtime.Serialization;
 
 namespace ABIEnCouches
 {
     /// <summary>
     /// ContratTemporaire : Classe abstraite intermediaire de tout les contrats temporaire
     /// </summary>
+    /// 
+    [DataContract]
+    [Serializable]
+    [KnownType(typeof(Cdd))]
+    [KnownType(typeof(Stagiaire))]
     public abstract class ContratTemporaire : ContratType
     {
         protected DateTime dateFinContrat;
@@ -37,6 +42,8 @@ namespace ABIEnCouches
         /// <summary>
         /// GetSet DatFinContrat
         /// </summary>
+        /// 
+        [DataMember]
         public DateTime DateFinContrat
         {
             get
@@ -53,6 +60,8 @@ namespace ABIEnCouches
         /// <summary>
         /// GetSet  Motif
         /// </summary>
+        /// 
+        [DataMember]
         public String Motif
         {
             get

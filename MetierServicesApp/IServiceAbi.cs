@@ -29,18 +29,24 @@ namespace MetierServicesApp
         string AddCollaborateur(Collaborateur newCollaborateur);
 
         [OperationContract]
-        string UpdateCollaborateur(Collaborateur newCollaborateur);
+        IList<ContratType> GetContratsCollaborateur(string matricule);
 
 
-        [OperationContract]
-        string GetContratsCollaborateur(Collaborateur unCollaborateur);
 
-        [OperationContract]
-        string AddContratCollaborateur(Collaborateur unCollaborateur, ContratType unNouveauContrat);
+        //NOT IMPLEMENTED---------------------------------------------------------
+
+
+        //[OperationContract]
+        //string UpdateCollaborateur(Collaborateur newCollaborateur);
+
+
+
+        //[OperationContract]
+        //string AddContratCollaborateur(Collaborateur unCollaborateur, ContratType unNouveauContrat);
 
 
 
     }
 
-    
+
 }

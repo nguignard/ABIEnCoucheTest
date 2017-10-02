@@ -7,12 +7,15 @@
 using System;
 using System.Data;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace ABIEnCouches
 {
     /// <summary>
     /// Classe Metier Collaborateur, gere la liste des contrats et des avenants d'un collaborateur
     /// </summary>
+    [DataContract]
+    [Serializable]
     public class Collaborateur
     {
         private int matricule;
@@ -61,6 +64,8 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur Matricule, Matricule ne peut être null
         /// </summary>
+        /// 
+        [DataMember]
         public int Matricule
         {
             get
@@ -83,6 +88,8 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur Civilité, ne peut être que M ou Mme
         /// </summary>
+        /// 
+        [DataMember]
         public String Civilite
         {
             get
@@ -105,6 +112,8 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur NomCollab
         /// </summary>
+        /// 
+        [DataMember]
         public string NomCollab
         {
             get
@@ -127,6 +136,8 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur PrénomCollab, ne peut être vide
         /// </summary>
+        /// 
+        [DataMember]
         public string PrenomCollab
         {
             get
@@ -149,6 +160,7 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur SituationFamiliale
         /// </summary>
+        [DataMember]
         public string SituationFamiliale
         {
             get
@@ -171,6 +183,7 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur Photo
         /// </summary>
+        [DataMember]
         public string Photo
         {
             get
@@ -187,6 +200,8 @@ namespace ABIEnCouches
         /// <summary>
         /// Accesseur Actif
         /// </summary>
+        /// 
+        [DataMember]
         public bool Actif
         {
             get
@@ -273,6 +288,23 @@ namespace ABIEnCouches
         {
             return "Matricule " + this.Matricule + " Civilite " + this.Civilite + " Nom " + this.NomCollab + " Prénom " + this.PrenomCollab;
         }
+        /// <summary>
+        /// permet d'envoyer au services Web une liste de collaborateurs
+        /// </summary>
+        /// <returns> List<Collaborateur></returns>
+        public List<ContratType> ContratToList()
+        {
+            List<ContratType> l = new List<ContratType>();
+            foreach (ContratType item in contrats.Values)
+            {
+                l.Add(item);
+            }
+            return l;
+        }
+
+
+
+
 
 
         //GESTION COLLECTION D'AUGMENTATIONS- NON GERE-------------------------------------------------------------------------------------

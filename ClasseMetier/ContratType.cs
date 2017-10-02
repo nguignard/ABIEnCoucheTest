@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using System.Runtime.Serialization;
 
 
 namespace ABIEnCouches
@@ -13,6 +14,11 @@ namespace ABIEnCouches
     /// <summary>
     /// Classe ContratType Abstraite, de tout les contrats
     /// </summary>
+    /// 
+    [DataContract]
+    [Serializable]
+    [KnownType(typeof(Cdi))]
+    [KnownType(typeof(ContratTemporaire))]
     public abstract class ContratType
     {
         //ATTRIBUTS------------------------------------------------------------
@@ -44,15 +50,17 @@ namespace ABIEnCouches
             this.Statut = statut;
             this.SalaireContractuel = salaireContractuel;
         }
-        
+
 
 
 
         //GET SET--------------------------------------------------------------
-       
-            /// <summary>
+
+        /// <summary>
         /// PPT IdContrat
         /// </summary>
+        /// 
+        [DataMember]
         public int IdContrat
         {
             get
@@ -76,6 +84,8 @@ namespace ABIEnCouches
         /// <summary>
         /// getset DateDebutContrat
         /// </summary>
+        /// 
+        [DataMember]
         public DateTime DateDebutContrat
         {
             get
@@ -89,6 +99,7 @@ namespace ABIEnCouches
             }
         }
 
+        [DataMember]
         public String Qualification
         {
             get
@@ -102,6 +113,7 @@ namespace ABIEnCouches
             }
         }
 
+        [DataMember]
         public String Statut
         {
             get
@@ -115,6 +127,7 @@ namespace ABIEnCouches
             }
         }
 
+        [DataMember]
         public decimal SalaireContractuel
         {
             get
@@ -137,6 +150,8 @@ namespace ABIEnCouches
         /// FinReelContrat: contrairement a une fin de contrat temporaire. 
         /// nullable, sera actif avec une fonction clôturer
         /// </summary>
+        /// 
+        [DataMember]
         public DateTime? FinReelContrat
         {
             get

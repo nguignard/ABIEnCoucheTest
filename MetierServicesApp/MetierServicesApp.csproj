@@ -87,6 +87,10 @@
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassesDAO\ClassesDAO.csproj">
+      <Project>{a2631a31-ee49-4af9-a833-fdf0647a2a5e}</Project>
+      <Name>ClassesDAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

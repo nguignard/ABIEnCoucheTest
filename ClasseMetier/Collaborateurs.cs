@@ -54,6 +54,22 @@ namespace ABIEnCouches
         }
 
         /// <summary>
+        /// permet d'envoyer au services Web une liste de collaborateurs
+        /// </summary>
+        /// <returns> List<Collaborateur></returns>
+        public List<Collaborateur> CollaborateurToList()
+        {
+            List<Collaborateur> l = new List<Collaborateur>();
+            foreach(Collaborateur item in listCollab.Values)
+            {
+                l.Add(item);
+            }
+            return l;
+        }
+
+
+
+        /// <summary>
         /// AddCollaborateur, rajoute un collaborateur au dictionnaire des collaborateur
         /// </summary>
         /// <param name="newCollab"></param>
