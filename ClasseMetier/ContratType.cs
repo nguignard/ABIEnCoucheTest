@@ -19,6 +19,8 @@ namespace ABIEnCouches
     [Serializable]
     [KnownType(typeof(Cdi))]
     [KnownType(typeof(ContratTemporaire))]
+    [KnownType(typeof(Cdd))]
+    [KnownType(typeof(Stagiaire))]
     public abstract class ContratType
     {
         //ATTRIBUTS------------------------------------------------------------

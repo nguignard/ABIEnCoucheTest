@@ -19,8 +19,7 @@ namespace ClassesDAO
         {
             this.ContratTypeE = new HashSet<ContratTypeE>();
         }
-
-
+    
         internal int matriculeE { get; set; }
         internal string civiliteE { get; set; }
         internal string nomE { get; set; }

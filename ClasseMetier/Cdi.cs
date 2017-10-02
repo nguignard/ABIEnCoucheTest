@@ -5,21 +5,22 @@
  ***********************************************************************/
 
 using System;
+using System.Runtime.Serialization;
 
 
 namespace ABIEnCouches
 {
-
     /// <summary>
     /// Classe Metier Cdi
     /// </summary>
+    /// 
+    [DataContract]
     public class Cdi : ContratType
     {
 
         public Cdi(int idContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
             :base(      idContrat,          dateDebutContrat,       qualification,          statut,         salaireContractuel)
         {       
-
         }
 
 

@@ -29,14 +29,12 @@ namespace MetierServicesApp
             return listeCollaborateurs.CollaborateurToList();
         }
 
-        public string AddCollaborateur(Collaborateur newCollaborateur)
+        public string addCollaborateur(Collaborateur newCollaborateur)
         {
             string retour = "";
-
             try
             {
                 Dao.AddNewCollaborateur(newCollaborateur);
-                 
             }
             catch(Exception e)
             {
@@ -47,8 +45,23 @@ namespace MetierServicesApp
         }
 
 
+
+
+        public IList<ContratType> GetContratsCollaborateur(string matricule)
+        {
+            Collaborateurs listeCollaborateurs = new Collaborateurs();
+            Dao.instancieCollaborateurs(listeCollaborateurs);
+
+
+            Collaborateur Collabo = listeCollaborateurs.RestituerCollaborateur(int.Parse(matricule));
+
+
+            return Collabo.ContratToList();
+        }
+
+
         /// <summary>
-        /// NOT IMPLEMENTED
+        /// NOT IMPLEMENTED---------------------------------------------------------------------------------
         /// </summary>
         /// <param name="newCollaborateur"></param>
         /// <returns></returns>
@@ -68,20 +81,6 @@ namespace MetierServicesApp
 
         //    return retour;
         //}
-
-
-
-
-        public IList<ContratType> GetContratsCollaborateur(string matricule)
-        {
-            Collaborateurs Collabs = new Collaborateurs();
-            Collaborateur Collab;
-
-            Dao.instancieCollaborateurs(Collabs);
-            Collab = Collabs.RestituerCollaborateur(int.Parse(matricule));
-
-            return Collab.ContratToList();
-        }
 
 
 

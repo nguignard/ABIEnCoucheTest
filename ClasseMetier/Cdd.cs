@@ -14,7 +14,7 @@ namespace ABIEnCouches
     /// <summary>
     /// Classe Metier ContratTemporaire abstraite
     /// </summary>
-    /// [Serializable]
+    [Serializable]
     
     public class Cdd : ContratTemporaire
     {
