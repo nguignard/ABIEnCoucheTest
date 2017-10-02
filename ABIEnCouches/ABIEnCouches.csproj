@@ -160,6 +160,10 @@
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAOClient\DAOClient.csproj">
+      <Project>{a6db3933-ffb2-45fc-9659-58ed3c5cc58e}</Project>
+      <Name>DAOClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

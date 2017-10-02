@@ -1,0 +1,2 @@
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\DAOClient\obj\Debug\DAOClient.csprojResolveAssemblyReference.cache
+C:\Users\Administrateur\Source\Repos\ABIE-MVC-SOAP\DAOClient\obj\Debug\DAOClient.csproj.CoreCompileInputs.cache

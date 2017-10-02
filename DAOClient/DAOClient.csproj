@@ -51,10 +51,6 @@
     <Compile Include="stageE.addOn.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ABIEnCouches\ABIEnCouches.csproj">
-      <Project>{07fed308-07fc-48dc-9d1e-6af37bb194df}</Project>
-      <Name>ABIEnCouches</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ClasseMetier\ClasseMetier.csproj">
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
