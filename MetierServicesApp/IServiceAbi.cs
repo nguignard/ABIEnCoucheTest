@@ -7,6 +7,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using ABIEnCouches;
 
+
 namespace MetierServicesApp
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IServiceAbi" à la fois dans le code et le fichier de configuration.
