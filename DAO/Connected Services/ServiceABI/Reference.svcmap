@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8701ace2-5760-45cd-98aa-7113c934a65c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3ed5c4d-1f92-4278-92b2-a748b198adf0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:54630/ServiceAbi.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://BIP07:8080/ServiceAbi.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceAbi.xsd" MetadataType="Schema" ID="4aabac70-7868-4275-8eac-927a2e45cb2a" SourceId="1" SourceUrl="http://localhost:54630/ServiceAbi.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServiceAbi1.xsd" MetadataType="Schema" ID="b399b88a-d650-4cb5-87a3-9258625a943b" SourceId="1" SourceUrl="http://localhost:54630/ServiceAbi.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServiceAbi.disco" MetadataType="Disco" ID="5ac3c8fc-e75d-447d-994c-502dfdf30a3b" SourceId="1" SourceUrl="http://localhost:54630/ServiceAbi.svc?disco" />
-    <MetadataFile FileName="ServiceAbi.wsdl" MetadataType="Wsdl" ID="0d9d513e-465a-4bd5-bad0-f87b760f31bf" SourceId="1" SourceUrl="http://localhost:54630/ServiceAbi.svc?wsdl" />
-    <MetadataFile FileName="ServiceAbi2.xsd" MetadataType="Schema" ID="4797ed61-67c5-4924-98aa-03fc859a347e" SourceId="1" SourceUrl="http://localhost:54630/ServiceAbi.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceAbi.wsdl" MetadataType="Wsdl" ID="f7b76922-8188-44f7-b78f-8400ed500da1" SourceId="1" SourceUrl="http://bip07:8080/ServiceAbi.svc?wsdl" />
+    <MetadataFile FileName="ServiceAbi.xsd" MetadataType="Schema" ID="e29fc4b9-764c-4772-b684-e98047fc5d04" SourceId="1" SourceUrl="http://bip07:8080/ServiceAbi.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceAbi1.xsd" MetadataType="Schema" ID="579fa22a-3a11-49e5-8720-2f225b48fc6d" SourceId="1" SourceUrl="http://bip07:8080/ServiceAbi.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceAbi2.xsd" MetadataType="Schema" ID="31b06975-6e46-4647-8a77-298f1c859329" SourceId="1" SourceUrl="http://bip07:8080/ServiceAbi.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceAbi.disco" MetadataType="Disco" ID="8243a49b-bff2-475f-902e-446c64968458" SourceId="1" SourceUrl="http://bip07:8080/ServiceAbi.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -20,17 +20,16 @@ namespace ClassesDAO
         /// <param name="listeCollaborateurs"></param>
         public static void instancieCollaborateurs(Collaborateurs listeCollaborateurs)
         {
-            //Collaborateurs Abi = null;
+            Collaborateur leCollab;
+            ServiceABI.ServiceAbiClient client = new ServiceABI.ServiceAbiClient();
 
-            //ServiceABI.Collaborateur unCollaborateur = DonneesDao.DbContextEntreprise.GetCollaborateurs();
+            foreach( ServiceABI.Collaborateur item in client.GetCollaborateurs())
+            {
+                leCollab = new Collaborateur(item.Civilite, item.NomCollab, item.PrenomCollab, item.SituationFamiliale, item.Actif);
 
-            //foreach(CollaborateursE item in DonneesDao.DbContextEntreprise.CollaborateursESet)
-            //{
-            //    leCollab = new Collaborateur(item.civiliteE, item.nomE, item.prenomE, item.situationE, item.actifE);
-
-            //    InstancieContratsCollaborateur(leCollab);
-            //    listeCollaborateurs.AddCollaborateur(leCollab);
-            //}
+                InstancieContratsCollaborateur(leCollab);
+                listeCollaborateurs.AddCollaborateur(leCollab);
+            }
         }
 
         /// <summary>
@@ -72,54 +71,54 @@ namespace ClassesDAO
         public static void AddNewCollaborateur(Collaborateur leCollaborateur)
         {
          
-            ContratType ct = leCollaborateur.ContratInitial();
-            CollaborateursE collaborateurE = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
-            ContratTypeE contratE = toContratE(ct);
-            contratE.CollaborateurEntity = collaborateurE; //Ajoute le contrat initial au collaborateur
+            //ContratType ct = leCollaborateur.ContratInitial();
+            //CollaborateursE collaborateurE = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
+            //ContratTypeE contratE = toContratE(ct);
+            //contratE.CollaborateurEntity = collaborateurE; //Ajoute le contrat initial au collaborateur
 
-            collaborateurE.ContratTypeE.Add(contratE);
-            try
-            {
-                DonneesDao.DbContextEntreprise.CollaborateursESet.Add(collaborateurE);
-                DonneesDao.DbContextEntreprise.SaveChanges();
-            }
-            catch (Exception )
-            {
-                //DonneesDao.DbContextEntreprise.CollaborateursESet.Remove(collaborateurE);
-                //DonneesDao.DbContextEntreprise.SaveChanges();
+            //collaborateurE.ContratTypeE.Add(contratE);
+            //try
+            //{
+            //    DonneesDao.DbContextEntreprise.CollaborateursESet.Add(collaborateurE);
+            //    DonneesDao.DbContextEntreprise.SaveChanges();
+            //}
+            //catch (Exception )
+            //{
+            //    //DonneesDao.DbContextEntreprise.CollaborateursESet.Remove(collaborateurE);
+            //    //DonneesDao.DbContextEntreprise.SaveChanges();
 
-                throw new Exception("le nouveau collaborateur n'a pu etre mis en DB");
-            }
+            //    throw new Exception("le nouveau collaborateur n'a pu etre mis en DB");
+            //}
         }
 
 
-        /// <summary>
-        /// toContratE transforme un contrat Metier en contrat entityFrameWork
-        /// </summary>
-        /// <param name="unContrat"></param>
-        /// <returns></returns>
-        public static ContratTypeE toContratE(ContratType unContrat)
-        {
-            ContratTypeE contratE = null;
+        ///// <summary>
+        ///// toContratE transforme un contrat Metier en contrat entityFrameWork
+        ///// </summary>
+        ///// <param name="unContrat"></param>
+        ///// <returns></returns>
+        //public static ContratTypeE toContratE(ContratType unContrat)
+        //{
+        //    ContratTypeE contratE = null;
 
-            if(unContrat is Cdi)
-            {
-                contratE = new CdiE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat);
-                            }
-            else if(unContrat is Cdd)
-            {
-                contratE = new CddE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat,
-                    ((Cdd)unContrat).DateFinContrat, ((Cdd)unContrat).Motif);
-            }
-            else if(unContrat is Stagiaire)
-            {
-                contratE = new StageE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat,
-                   ((Stagiaire)unContrat).DateFinContrat, ((Stagiaire)unContrat).Motif,
-                   ((Stagiaire)unContrat).Ecole, ((Stagiaire)unContrat).Mission
-                   );
-            }
-            return contratE;
-        }
+        //    if(unContrat is Cdi)
+        //    {
+        //        contratE = new CdiE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat);
+        //                    }
+        //    else if(unContrat is Cdd)
+        //    {
+        //        contratE = new CddE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat,
+        //            ((Cdd)unContrat).DateFinContrat, ((Cdd)unContrat).Motif);
+        //    }
+        //    else if(unContrat is Stagiaire)
+        //    {
+        //        contratE = new StageE(unContrat.IdContrat, unContrat.DateDebutContrat, unContrat.Qualification, unContrat.Statut, unContrat.SalaireContractuel, unContrat.FinReelContrat,
+        //           ((Stagiaire)unContrat).DateFinContrat, ((Stagiaire)unContrat).Motif,
+        //           ((Stagiaire)unContrat).Ecole, ((Stagiaire)unContrat).Mission
+        //           );
+        //    }
+        //    return contratE;
+        //}
 
 
 

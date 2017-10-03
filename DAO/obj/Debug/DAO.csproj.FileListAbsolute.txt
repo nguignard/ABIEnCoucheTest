@@ -1,2 +1,9 @@
 C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\bin\Debug\DAO.dll.config
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\bin\Debug\DAO.dll
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\bin\Debug\DAO.pdb
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\bin\Debug\ClasseMetier.dll
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\bin\Debug\ClasseMetier.pdb
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\obj\Debug\DAO.dll
+C:\Users\Administrateur\Source\Repos\ABIEnCoucheTest4\DAO\obj\Debug\DAO.pdb

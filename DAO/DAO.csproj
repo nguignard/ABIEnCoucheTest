@@ -53,16 +53,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\ClasseMetier\ClasseMetier.csproj">
       <Project>{030c2412-8de1-417d-b6e0-442fd0c812d9}</Project>
       <Name>ClasseMetier</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
+    <None Include="App.config" />
     <None Include="Connected Services\ServiceABI\ClassesDAO.ServiceABI.Collaborateur.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
