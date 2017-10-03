@@ -36,9 +36,19 @@ namespace ABIEnCouches
             this.SalaireContractuel = salaireContractuel;
         }
 
+
+        public ContratType(int IdContrat, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel)
+        {
+            this.IdContrat = IdContrat;
+            this.DateDebutContrat = dateDebutContrat;
+            this.Qualification = qualification;
+            this.Statut = statut;
+            this.SalaireContractuel = salaireContractuel;
+        }
+
         //GET SET--------------------------------------------------------------
-       
-            /// <summary>
+
+        /// <summary>
         /// PPT IdContrat
         /// </summary>
         public int IdContrat
@@ -47,7 +57,7 @@ namespace ABIEnCouches
             {
                 return idContrat;
             }
-            private set
+             set
             {
                 if (this.idContrat < 0)
                 {

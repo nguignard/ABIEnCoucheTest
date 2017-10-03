@@ -20,23 +20,17 @@ namespace ClassesDAO
         /// <param name="listeCollaborateurs"></param>
         public static void instancieCollaborateurs(Collaborateurs listeCollaborateurs)
         {
-            if (DonneesDao.DbContextEntreprise == null)
-            {
-                DonneesDao.DbContextEntreprise = new EntrepriseContainer();
-            }
+            //Collaborateurs Abi = null;
 
-            //var query = from a in DonneesDao.DbContextEntreprise.CollaborateursESet
-            //            select a;
-                       
-            Collaborateur leCollab = null;
+            //ServiceABI.Collaborateur unCollaborateur = DonneesDao.DbContextEntreprise.GetCollaborateurs();
 
-            foreach(CollaborateursE item in DonneesDao.DbContextEntreprise.CollaborateursESet)
-            {
-                leCollab = new Collaborateur(item.civiliteE, item.nomE, item.prenomE, item.situationE, item.actifE);
+            //foreach(CollaborateursE item in DonneesDao.DbContextEntreprise.CollaborateursESet)
+            //{
+            //    leCollab = new Collaborateur(item.civiliteE, item.nomE, item.prenomE, item.situationE, item.actifE);
 
-                InstancieContratsCollaborateur(leCollab);
-                listeCollaborateurs.AddCollaborateur(leCollab);
-            }
+            //    InstancieContratsCollaborateur(leCollab);
+            //    listeCollaborateurs.AddCollaborateur(leCollab);
+            //}
         }
 
         /// <summary>
@@ -45,41 +39,27 @@ namespace ClassesDAO
         /// <param name="leCollaborateur"></param>
         public static void InstancieContratsCollaborateur(Collaborateur leCollaborateur)
         {
-            if(DonneesDao.DbContextEntreprise == null)
-            {
-                DonneesDao.DbContextEntreprise = new EntrepriseContainer();
-            }
-
-            var query = from b in DonneesDao.DbContextEntreprise.ContratTypeESet
-                        where b.CollaborateurEntity.matriculeE == leCollaborateur.Matricule
-                        select b;
-
             ContratType LeContratType = null;
 
-            foreach(ContratTypeE item in query)
+            foreach(ServiceABI.ContratType item in DonneesDao.DbContextEntreprise.GetContratsCollaborateur(leCollaborateur.Matricule.ToString()))
             {
-                if(item is CdiE)
+                if(item is ServiceABI.Cdi)
                 {
-                    LeContratType = new Cdi(item.idContratE, item.dateDebutE,item.qualificationE.Trim(),item.statutE.Trim(),item.salaireE);
+                    LeContratType = new Cdi(item.IdContrat, item.DateDebutContrat,item.Qualification.Trim(),item.Statut.Trim(),item.SalaireContractuel);
                 }
 
-                if(item is CddE)
+                if(item is ServiceABI.Cdd)
                 {
-                    LeContratType = new Cdd(item.idContratE, item.dateDebutE, item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE, ((CddE)item).dateFinE, ((CddE)item).motifE.Trim());
+                    LeContratType = new Cdd(item.IdContrat, item.DateDebutContrat, item.Qualification.Trim(), item.Statut.Trim(), item.SalaireContractuel, ((ServiceABI.Cdd)item).DateFinContrat, ((ServiceABI.Cdd)item).Motif.Trim());
                 }
 
-                if(item is StageE)
+                if(item is ServiceABI.Stagiaire)
                 {
-                    LeContratType = new Stagiaire(item.idContratE, ((StageE)item).ecoleE.Trim(), ((StageE)item).missionE.Trim(), ((StageE)item).motifE.Trim(), item.dateDebutE, ((StageE)item).dateFinE , item.qualificationE.Trim(), item.statutE.Trim(), item.salaireE);
+                    LeContratType = new Stagiaire(item.IdContrat, ((ServiceABI.Stagiaire)item).Ecole.Trim(), ((ServiceABI.Stagiaire)item).Mission.Trim(), ((ServiceABI.Stagiaire)item).Motif.Trim(), item.DateDebutContrat, ((ServiceABI.Stagiaire)item).DateFinContrat , item.Qualification.Trim(), item.Statut.Trim(), item.SalaireContractuel);
                 }
                 leCollaborateur.AddContrat(LeContratType);
 
             }
-
-         
-            
-
-
         }
 
 
@@ -91,10 +71,7 @@ namespace ClassesDAO
         /// <param name="leCollaborateur"></param>
         public static void AddNewCollaborateur(Collaborateur leCollaborateur)
         {
-            if(DonneesDao.DbContextEntreprise == null)
-            {
-                DonneesDao.DbContextEntreprise = new EntrepriseContainer();
-            }
+         
             ContratType ct = leCollaborateur.ContratInitial();
             CollaborateursE collaborateurE = new CollaborateursE(leCollaborateur.Matricule, leCollaborateur.Civilite, leCollaborateur.NomCollab, leCollaborateur.PrenomCollab, leCollaborateur.SituationFamiliale, leCollaborateur.Photo, leCollaborateur.Actif);
             ContratTypeE contratE = toContratE(ct);

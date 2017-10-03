@@ -59,7 +59,7 @@ namespace ABIEnCouches
             {
                 return matricule;
             }
-            private set
+             set
             {
                 if (value <=0)
                 {

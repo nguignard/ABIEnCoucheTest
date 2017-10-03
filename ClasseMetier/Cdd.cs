@@ -16,6 +16,12 @@ namespace ABIEnCouches
 
         }
 
+        public Cdd(int matr, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, DateTime datFinContrat, String motif) : base(matr,dateDebutContrat, qualification, statut, salaireContractuel, datFinContrat, motif)
+        {
+
+        }
+
+
 
         public override String ToString()
         {

@@ -22,6 +22,17 @@ namespace ABIEnCouches
             this.Mission = Mission;
         }
 
+
+        public Stagiaire(int mat, String ecole, String mission,
+           String motif, DateTime dateDebutContrat, DateTime datFinContrat, String qualification, String statut, Decimal salaireContractuel) :
+           base(mat, dateDebutContrat, qualification, statut, salaireContractuel, datFinContrat, motif)
+        {
+            this.ecole = Ecole;
+            this.Mission = Mission;
+        }
+
+
+
         public override String ToString()
         {
            

@@ -12,6 +12,6 @@ namespace ClassesDAO
     /// </summary>
     public class DonneesDao
     {
-        public static ServiceABI.ServiceAbiClient client ;
+        public static ServiceABI.ServiceAbiClient DbContextEntreprise = new ServiceABI.ServiceAbiClient();
     }
 }

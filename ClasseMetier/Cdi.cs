@@ -17,6 +17,12 @@ namespace ABIEnCouches
 
         }
 
+        public Cdi(int matricul, DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel) : base(matricul, dateDebutContrat, qualification, statut, salaireContractuel)
+        {
+
+        }
+
+
         public override String ToString()
         {
             return "CDI : idContrat " + idContrat + " dateDebutContrat " + dateDebutContrat + " salaireContractuel " + salaireContractuel;

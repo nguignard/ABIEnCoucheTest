@@ -35,6 +35,20 @@ namespace ABIEnCouches
             this.motif = Motif;
         }
 
+
+
+        public ContratTemporaire(int matricul,DateTime dateDebutContrat, String qualification, String statut, Decimal salaireContractuel, DateTime datFinContrat, String motif) : base(matricul,dateDebutContrat, qualification, statut, salaireContractuel)
+        {
+            this.dateDebutContrat = DateDebutContrat;
+            this.qualification = Qualification;
+            this.statut = Statut;
+            this.salaireContractuel = SalaireContractuel;
+            this.datFinContrat = DatFinContrat;
+            this.motif = Motif;
+        }
+
+
+
         /// <summary>
         /// GetSet DatFinContrat
         /// </summary>
